@@ -1,0 +1,27 @@
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+//estilos generales
+
+//color
+$primary-color:#8639ab;
+$secondary-color:#ffffff;
+$footer-color:#8639ab;
+
+$gray-color:#eff0f4;
+$gray-light:#f6f7f9;
+
+$green:#b8cd16;
+
+$color-text:#c1c5d0;
+
+$btn-purple:#8639ab;
+$btn-green:#8639ab;
+
+//estilos por seccion
+
+@import "scss/menu";
+@import "scss/header";
+@import "scss/footer";
+@import "scss/main";
+@import "scss/fonts";
+@import "scss/wizard";

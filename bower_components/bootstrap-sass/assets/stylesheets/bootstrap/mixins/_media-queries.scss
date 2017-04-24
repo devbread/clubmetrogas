@@ -1,0 +1,15 @@
+@mixin breakpoint($mq) {
+    @if $mq == small {
+        @media (min-width: 768px) {
+            @content;
+        }
+    } @else if $mq == medium {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }  @else if $mq == large {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }  
+}

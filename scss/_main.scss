@@ -1,0 +1,235 @@
+.main{
+	padding:20px;
+	background: rgba(255,187,16,1); /* old browsers */
+	background-image: url(../img/nina.png), -webkit-linear-gradient(45deg, rgba(255,187,16,1) 0%, rgba(255,187,16,1) 45%, rgba(249,232,183,1) 100%); /* Chrome 10-25, Safari 5.1-6 */
+	background-image: url(../img/nina.png), linear-gradient(45deg, rgba(255,187,16,1) 0%, rgba(255,187,16,1) 45%, rgba(249,232,183,1) 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-repeat: no-repeat;
+	background-position: center 5%;
+	text-align: center;
+	@include breakpoint(small){
+		background: rgba(255,187,16,1); /* old browsers */
+		background-image: url(../img/nina-tablet.png), -webkit-linear-gradient(45deg, rgba(255,187,16,1) 0%, rgba(255,187,16,1) 45%, rgba(249,232,183,1) 100%); /* Chrome 10-25, Safari 5.1-6 */
+		background-image: url(../img/nina-tablet.png), linear-gradient(45deg, rgba(255,187,16,1) 0%, rgba(255,187,16,1) 45%, rgba(249,232,183,1) 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		background-repeat: no-repeat;
+		background-position: center -30px;
+		text-align: left;
+		padding:0;
+		// padding:20px;
+	}
+
+	@include breakpoint(small){
+		.claims{
+			padding:20px;
+		}
+	}
+
+	@include breakpoint(medium){
+		.claims{
+			padding:20px 120px;
+		}
+	}
+
+
+	@include breakpoint(large){
+		.claims{
+			padding:0 15px 0 0;
+		}
+		padding:47px;
+	}
+
+	.title-1,.title-2{
+		color: $secondary-color;
+		font-family: 'montserratbold';
+		font-size: 2em;
+		line-height: 45px;
+		@include breakpoint(small){
+			background-color: $primary-color;
+			border-radius:20px;
+			padding:10px;
+			display: inline-block;
+			text-align: left;
+			font-size: 1.5em;
+			line-height: 1.1em;
+		}
+		@include breakpoint(large){
+			font-size: 2.4em;
+		}
+	}
+	.title-1{
+		@include breakpoint(small){
+			margin-bottom: 10px;
+		}
+	}
+
+	.title-2{
+		@include breakpoint(large){
+			margin-bottom: 40px;
+		}
+	}
+
+	//form
+	.ingresa{
+		background-color: $secondary-color;
+		padding: 20px 30px 60px 30px;
+		border-radius: 20px;
+		text-align: left;
+		margin-top: 330px;
+		@include breakpoint(small){
+			margin-top: 0;
+			width: 45%;
+		}
+		@include breakpoint(large){
+			width: 100%;
+		}
+		h2{
+			color:$primary-color;
+			margin: 0;
+			font-family: 'montserratbold';
+			font-size: 1.3em;
+			margin-bottom: 40px;
+		}
+
+		input[type="text"]{
+			width: 100%;
+			padding: 10px;
+			border:1px solid #cccccc;
+			border-radius: 10px;
+			appearance: none;
+			-moz-appearance: none;
+			-webkit-appearance: none;
+
+			-webkit-transition: all 0.30s ease-in-out;
+			-moz-transition: all 0.30s ease-in-out;
+			-ms-transition: all 0.30s ease-in-out;
+			-o-transition: all 0.30s ease-in-out;
+			&:focus{
+				border: 2px solid $primary-color;
+				outline: none;
+			}
+		}
+
+		input[type="submit"]{
+			background-color: $primary-color;
+			width: 100%;
+			padding: 10px;
+			border-radius: 10px;	
+			color:$secondary-color;
+			border:none;
+			margin-top: 40px;
+		}
+
+	}//form
+
+
+	.recomendar{
+		// background-color: rgba($primary-color,0.3);
+		// border-radius: 10px;
+		padding: 20px 20px;
+		position: relative;
+		@include breakpoint(small){
+			background-color: $primary-color;
+			@include clearfix;
+		}
+		@include breakpoint(large){
+			padding:20px 15px;
+			border-radius:10px;
+			background-color: rgba($primary-color, .4);
+		}
+		h3{
+			color: $secondary-color;
+			font-family: 'montserratbold';
+			// font-size: 1.8em;
+			font-size: 1.2em;
+			line-height: 30px;
+			margin:0;
+			@include breakpoint (small){
+				text-align: center;
+				font-size: 1.8em;
+			}
+		}
+		.timeline{
+			display: none;
+			height: 5px;
+			background-color: $secondary-color;
+			width: 100%;
+			// display: block;
+			margin:25px 0; 
+			position: relative;
+			@include breakpoint(small){
+				display: block;
+			}
+			&:after{
+			    content:"";
+			    position: absolute;
+			    width: 30px;
+			    height: 30px;
+			    display: block;
+			    background-color: $secondary-color;
+			    top: -13px;
+			    left:80px;
+			    border-radius: 100%;
+			    box-shadow: 245px 0px 0px 0px rgba(255, 255, 255, 1);
+			}
+			&:before{
+			    content:"";
+			    position: absolute;
+			    width: 30px;
+			    height: 30px;
+			    display: block;
+			    background-color: $secondary-color;
+			    top: -13px;
+			    right:60px;
+			    border-radius: 100%;
+			}
+		}
+		.lista-recomendar{
+			text-align: center;
+			span{
+				font-size: 4em;//5
+
+				color: $secondary-color;
+				font-family: 'montserratbold';
+
+				@include breakpoint (small){
+					margin-right: 10px;
+					float: left;
+					position: relative;
+					top: -15px;
+				}
+			}
+			p{
+				font-size: 0.9em;
+				color: $secondary-color;
+				width: 100%;
+				@include breakpoint (small){
+					float: left;
+					width: 70%;
+					font-size: 0.75em;
+					text-align: left;
+				}
+			}
+		}
+	}//recomendar
+}//.main
+
+//legal
+.legal{
+	padding:50px 20px;
+	background-color: $gray-color;
+	clear:both;
+	@include breakpoint(small){
+		padding:100px;
+	}
+	@include breakpoint(large){
+		padding:50px 20px;
+	}
+	p{
+		color:$color-text;
+		text-align: center;
+		font-size: 0.7em;
+		@include breakpoint(small){
+			text-align: left;
+			font-size: 0.65em;
+		}
+	}
+}

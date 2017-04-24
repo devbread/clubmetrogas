@@ -1,0 +1,58 @@
+.colorFull{
+		background-color: $primary-color;
+}
+footer{
+	background-color: $primary-color;
+	a{
+		padding: 30px 20px 30px 20px;
+		display: block;
+		border-bottom: 2px solid darken( $primary-color, 5% );
+		margin-bottom: 1em;
+		@include breakpoint(small){
+			padding-top: 40px;
+		}
+		& img{
+			width: 80%;
+			margin: 0 auto;
+			@include breakpoint(small){
+				width: 20%;
+				float: left;
+			}
+		}
+	}
+
+	ul.navFoot{
+		margin: 0;
+		padding:0;
+		list-style: none;
+		text-align: center;
+		li{
+			display: block;
+			@include breakpoint(small){
+				display: inline;
+			}
+			a{
+				color:$secondary-color;
+				border-bottom:none;
+				font-family: 'montserratbold';
+				font-size: 0.9em;
+				padding:10px 0;
+				text-decoration: none;
+				@include breakpoint(small){
+					font-size: 0.7em;
+					text-align: left;
+					margin-left: 20px;
+				}
+			}
+		}		
+	}
+	
+	.arrow{
+		border-bottom:none;
+		text-align: center;
+		@include breakpoint(small){
+			display: none;
+		}
+	}
+
+}//.footer

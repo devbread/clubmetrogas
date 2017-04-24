@@ -1,0 +1,92 @@
+doctype html
+html.no-js(lang='es')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title Club Metrogas
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='apple-touch-icon', href='apple-touch-icon.png')
+    //- Place favicon.ico in the root directory
+
+    link(rel='stylesheet', href='css/style.css')
+    link(rel='stylesheet', href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
+
+    script(src='js/modernizr.js')
+  body
+    .container-fluid
+      .row
+        .container
+          .row
+            .preheader
+              .col-md-6
+                a.linkTop(href="#") ir al club Metrogas: 
+                  span metrogas.cl/club
+              .col-md-6
+                ul.secondary-nav
+                  li: a(href="#") preguntas frecuentes
+                  li: a(href="#") conócenos            
+                  li: a(href="#") 
+                    i.ion-social-facebook
+                  li: a(href="#") 
+                    i.ion-social-twitter
+            header
+              .row
+                .col-sm-12
+                  a.logo(href="#")
+                    img.img-responsive(src="img/logo.png", alt="Metrogas Club")
+            section.main
+              .row
+                .col-xs-12.col-sm-12.col-lg-10
+                  .claims
+                    span.title-1 Invita a tus amigos a ser socios del club 
+                    span.title-2 y gana muchos Metropuntos
+                .col-xs-12.col-sm-12.col-md-12
+                  .claims.col-lg-4
+                    form.ingresa
+                      h2 Ingresa tu RUT
+                      input(type="text", placeholder="RUT:11111111-1")
+                      input(type="submit", value="Ingresar")
+                  .recomendar.col-lg-8
+                    .col-xs-12.col-sm-12.col-md-12
+                      h3 Cómo recomendar a tus amigos paso a paso:
+                      .lista-recomendar
+                        .timeline
+                        .row
+                          .col-xs-12.col-sm-4
+                            <span>1</span>
+                            p ingresa tu RUT y otros datos solicitados. No olvides confirmar tu mail y aceptar las condiciones legales del concurso.
+                          .col-xs-12.col-sm-4
+                            <span>2</span>
+                            p Recomienda a tus amigos ingresando nombre, RUT y mail para que  se les envíe un mail de confirmación de socios.
+                          .col-xs-12.col-sm-4
+                            <span>3</span> 
+                            p El premio de 20.000 Metropuntos por inscrito es válido solo en los primeros 3 invitados que se hagan socio. Recuerda que para participar tienes que ser socio del Club.
+            section.legal
+              .row
+                .col-xs-12
+                  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam recusandae, et deserunt sapiente laboriosam possimus quo voluptas fugit, suscipit id, a unde debitis, doloremque modi. Fuga nostrum, optio in minus.
+                  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam recusandae, et deserunt sapiente laboriosam possimus quo voluptas fugit, suscipit id, a unde debitis, doloremque modi. Fuga nostrum, optio in minus.
+                  p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam recusandae, et deserunt sapiente laboriosam possimus quo voluptas fugit, suscipit id, a unde debitis, doloremque modi. Fuga nostrum, optio in minus.
+    .container.colorFull
+      .row
+        footer
+          .col-xs-12
+            a(href="#")
+              img.img-responsive(src="img/logo.png", alt="Metrogas Club")
+          .col-xs-12.col-sm-6
+            ul.navFoot
+              li: a(href="#") ir al sitio: <span>metrogas.cl/club</span>
+          .col-xs-12.col-sm-6
+            ul.navFoot
+              li: a(href="#") preguntas frecuentes
+              li: a(href="#") Conócenos
+          .col-xs-12
+            .upFooter
+              a.arrow(href="#") arrow
+
+
+    //-js
+    script(src='js/jquery.min.js')
+    script(src='js/bootstrap.min.js')
+    script(src='js/main.js')
