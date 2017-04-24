@@ -10,9 +10,17 @@ footer{
 		margin-bottom: 1em;
 		@include breakpoint(small){
 			padding-top: 40px;
+			padding-left: 0;
+			margin-bottom: 20px;
+		}
+		@include breakpoint(medium){
+			padding-bottom: 40px;
+		}
+		@include breakpoint(large){
+			padding-bottom: 50px;
 		}
 		& img{
-			width: 80%;
+			width: 290px;
 			margin: 0 auto;
 			@include breakpoint(small){
 				width: 20%;
@@ -21,35 +29,123 @@ footer{
 		}
 	}
 
+	.flecha-Right{
+		display: none;
+		@include breakpoint(small){
+			display: block;
+			position: absolute;
+			right: 20px;
+			top: 35px;
+			& img{
+				width: 25px;
+			}
+		}
+	}
+
+	a.linkFoot{
+		text-align: center;	
+		padding:10px 0 20px 0;
+		margin: 0;
+		border: none;
+		color: $secondary-color;
+		text-decoration: none;
+		& span{
+			font-family: 'montserratblack';
+		}
+		@include breakpoint(small){
+			padding: 0;
+			text-align: left;
+			font-size: 0.7em;
+		}
+	}
+
 	ul.navFoot{
 		margin: 0;
 		padding:0;
 		list-style: none;
 		text-align: center;
+		@include breakpoint(small){
+			text-align: left;
+			float: left;
+			padding-left: 50px;
+		}
+		@include breakpoint(medium){
+			padding-left: 160px;
+		}
+
+		@include breakpoint(large){
+			padding-left: 260px;
+		}
+
 		li{
 			display: block;
 			@include breakpoint(small){
-				display: inline;
+				display: inline-block;
+				position: relative;
+				top: -6px;
+				margin-right: 15px;
 			}
 			a{
 				color:$secondary-color;
 				border-bottom:none;
-				font-family: 'montserratbold';
+				font-family: 'montserratregular';
 				font-size: 0.9em;
 				padding:10px 0;
 				text-decoration: none;
 				@include breakpoint(small){
 					font-size: 0.7em;
 					text-align: left;
-					margin-left: 20px;
+					margin-left: 0px;
+					font-family: 'montserratblack';
+					padding:0; 
 				}
 			}
 		}		
 	}
+
+	ul.socialNav{
+		margin: 0;
+		padding:0;
+		list-style: none;
+		text-align: center;
+		@include breakpoint(small){
+			float: right;
+			position: relative;
+			top: -3px;
+		}
+		li{
+			display: inline-block;
+			width: auto;
+			height: auto;
+			padding-right:20px;
+			margin-right: 14px;
+			border-right: 2px solid $secondary-color;
+			&:last-child{
+				margin-right: 0;
+				border-right: none;
+				padding-right: 0;
+			} 
+			a{
+				color:$secondary-color;
+				font-size:1.8em;
+				padding: 0;
+				border-bottom: none;
+				margin-bottom: 0;
+				@include breakpoint(small){
+					font-size: 1em;
+				}	
+			}
+		}
+	}
 	
-	.arrow{
+	a.arrow{
 		border-bottom:none;
 		text-align: center;
+		width: 90px;
+		margin: 0 auto;
+		& img{
+			width: 100%;
+		}
 		@include breakpoint(small){
 			display: none;
 		}

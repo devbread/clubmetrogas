@@ -64,6 +64,7 @@ jQuery(document).ready(function() {
     		else {
     			$(this).removeClass('input-error');
     		}
+
     	});
     	// fields validation
     	
@@ -130,4 +131,43 @@ jQuery(document).ready(function() {
         });
         event.preventDefault();
     });
+});
+
+
+
+//repito: tontos, no pesados!
+
+// var max_fields      = 10; //maximum input boxes allowed
+// var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+// var add_button      = $(".add_field_button"); //Add button ID
+
+// var x = 1; //initlal text box count
+// $(add_button).click(function(e){ //on add input button click
+//         e.preventDefault();
+//         if(x < max_fields){ //max input box allowed
+//                 x++; //text box increment
+//                 $(wrapper).append('<div> <div class="col-xs-12 col-sm-6 col-lg-2"> <div class="form-group"> <label for="f1-first-name" class="sr-only">Nombre</label> <input id="f1-first-name" type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control"> </div> </div> <div class="col-xs-12 col-sm-6 col-lg-2"> <div class="form-group"> <label for="f1-last-name" class="sr-only">Apellido</label> <input id="f1-last-name" type="text" name="f1-last-name" placeholder="Apellido" class="f1-last-name form-control"> </div> </div> <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2"> <div class="form-group"> <label for="f1-email" class="sr-only">Email</label> <input id="f1-email" type="text" name="f1-email" placeholder="Email..." class="f1-email form-control"> </div> </div> <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2"> <div class="form-group"> <label for="f1-email" class="sr-only">Confirma tu Email</label> <input id="f1-email" type="text" name="f1-email" placeholder="Confirma tu email" class="f1-email form-control"> </div> </div> <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"> <div class="form-group"> <label for="f1-email" class="sr-only">RUT</label> <input id="f1-first-name" type="text" name="f1-first-name" placeholder="Confirma tu email" class="f1-first-name form-control"> </div> </div> <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1"><a href="#" class="remove_field"><i class="ion-close-circled"></i></a></div> </div>'); //add input box
+//         }
+// });
+
+// $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+//         e.preventDefault(); $(this).parent('div').remove(); x--;
+// });
+
+
+var max_fields      = 10; //maximum input boxes allowed
+var wrapper         = $(".input_fields_wrap"); //Fields wrapper
+var add_button      = $(".add_field_button"); //Add button ID
+
+var x = 1; //initlal text box count
+$(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+                x++; //text box increment
+                $(wrapper).append('<div><div class="ed-item base-100 formulario-direcciones"><div id="formulario-comprobante" class="ed-container main-center"><div class="ed-item base-100 web-30 no-padding"><input type="text" placeholder="Nombre" name="nombre"></div><div class="ed-item base-100 web-30 no-padding"><input type="text" placeholder="Apellido" name="apellido"></div><div class="ed-item base-100 web-30 no-padding"><input type="email" placeholder="Email" type="email" placeholder="mail@ejemplo.com" class="validate" name="xemail" id="xemail" required></div><a href="#" class="remove_field"><i class="ion-close-circled"></i></a></div></div></div></div>'); //add input box
+        }
+});
+
+$(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+        e.preventDefault(); $(this).parent('div').remove(); x--;
 });
