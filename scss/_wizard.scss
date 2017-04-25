@@ -443,11 +443,18 @@ fieldset{
     font-family: 'montserratbold';
     font-size: 1em;
     text-align: center;
+    color:$green;
+    margin-bottom: 0;
+    margin-top: 10px;
   }
 
   .signo-mas{
     font-size: 2em;
     color: $green;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
   }
 }
 
