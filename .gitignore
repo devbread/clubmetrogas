@@ -1,4 +1,15 @@
 
+<<<<<<< HEAD
 index.html
 
 recomienda.html
+=======
+*.codekit
+<<<<<<< HEAD
+=======
+
+*.codekit
+
+config.codekit
+>>>>>>> test
+>>>>>>> master
