@@ -144,7 +144,7 @@ html.no-js(lang='es')
 
                       .col-xs-12
                         .add-button
-                          <p class="text-rosa">agregar más amigos</p>
+                          <p class="text-rosa add_field_button">agregar más amigos</p>
                           <a href="#" class="signo-mas add_field_button"><i class="ion-plus-circled"></i></a>
                       .f1-buttons
                         //- button.btn.btn-previous(type='button') Previous
@@ -176,16 +176,27 @@ html.no-js(lang='es')
           .col-xs-12
             a(href="#")
               img.img-responsive(src="img/logo.png", alt="Metrogas Club")
+            .flecha-Right
+                img(src="img/arrow-bttm.svg", alt="subir")
+              
           .col-xs-12.col-sm-6
-            ul.navFoot
-              li: a(href="#") ir al sitio: <span>metrogas.cl/club</span>
+            a.linkFoot(href="#") ir al sitio: <span>metrogas.cl/club</span>
           .col-xs-12.col-sm-6
             ul.navFoot
               li: a(href="#") preguntas frecuentes
               li: a(href="#") Conócenos
+            ul.socialNav
+              li
+                 a(href="#")
+                    i.ion-social-facebook
+              li
+                 a(href="#")
+                    i.ion-social-twitter
+
           .col-xs-12
             .upFooter
-              a.arrow(href="#") arrow
+              a.arrow(href="#")
+                img(src="img/arrow-bttm.svg", alt="subir")
 
 
     //-js
