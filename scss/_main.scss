@@ -1,8 +1,8 @@
 .main{
 	padding:20px;
 	background: rgba(255,187,16,1); /* old browsers */
-	background-image: url(../img/nina.png), -webkit-linear-gradient(45deg, rgba(255,187,16,1) 0%, rgba(255,187,16,1) 45%, rgba(249,232,183,1) 100%); /* Chrome 10-25, Safari 5.1-6 */
-	background-image: url(../img/nina.png), linear-gradient(45deg, rgba(255,187,16,1) 0%, rgba(255,187,16,1) 45%, rgba(249,232,183,1) 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-image: url(../img/nina.png), -webkit-linear-gradient(45deg, rgba(255,187,16,1) 0%, rgba(255,187,16,1) 45%, rgba(255,187,16,1) 100%); /* Chrome 10-25, Safari 5.1-6 */
+	background-image: url(../img/nina.png), linear-gradient(45deg, rgba(255,187,16,1) 0%, rgba(255,187,16,1) 45%, rgba(255,187,16,1) 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	background-repeat: no-repeat;
 	background-position: center 5%;
 	text-align: center;
@@ -15,6 +15,21 @@
 		text-align: left;
 		padding:0;
 		// padding:20px;
+	}
+
+	@include breakpoint(large){
+		background: rgba(255,187,16,1); /* old browsers */
+		background-image: url(../img/nina-desktop.png), -webkit-linear-gradient(45deg, rgba(255,187,16,1) 0%, rgba(255,187,16,1) 45%, rgba(249,232,183,1) 100%); /* Chrome 10-25, Safari 5.1-6 */
+		background-image: url(../img/nina-desktop.png), linear-gradient(45deg, rgba(255,187,16,1) 0%, rgba(255,187,16,1) 45%, rgba(249,232,183,1) 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		text-align: left;
+		padding:0;
+		// padding:20px;
+	}
+
+	.nopapading{
+		padding: 0 !important;
 	}
 
 	@include breakpoint(small){
@@ -74,6 +89,7 @@
 		border-radius: 20px;
 		text-align: left;
 		margin-top: 330px;
+		box-shadow: 0 2px 6px 0 rgba(0,0,0,0.18);
 		@include breakpoint(small){
 			margin-top: 0;
 			width: 45%;
@@ -111,11 +127,13 @@
 		input[type="submit"]{
 			background-color: $primary-color;
 			width: 100%;
-			padding: 10px;
+			padding: 9px;
 			border-radius: 10px;	
 			color:$secondary-color;
+			font-family: 'montserratbold';
 			border:none;
 			margin-top: 40px;
+			box-shadow: 0 2px 6px 0 rgba(0,0,0,0.18);
 		}
 
 	}//form

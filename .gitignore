@@ -1,2 +1,9 @@
 
 *.codekit
+<<<<<<< HEAD
+=======
+
+*.codekit
+
+config.codekit
+>>>>>>> test

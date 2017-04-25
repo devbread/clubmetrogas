@@ -3,7 +3,7 @@ input[type="text"],
 input[type="password"], 
 textarea, 
 textarea.form-control {
-  height: 44px;
+    height: 44px;
     margin: 0;
     padding: 0 20px;
     vertical-align: middle;
@@ -50,8 +50,8 @@ label { font-weight: 300; }
 
 
 button.btn {
-  min-width: 105px;
-  height: 40px;
+  width: 100%;
+  height: 60px;
     margin: 0;
     padding: 0 20px;
     vertical-align: middle;
@@ -61,10 +61,17 @@ button.btn {
     font-weight: 300;
     line-height: 40px;
     color: #fff;
-    -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;
     text-shadow: none;
     -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
     -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+    @include breakpoint(small){
+      width: 30%;
+    }
+    @include breakpoint(medium){
+      float: right;
+      font-size: 1.2em;
+    }
 }
 
 button.btn:hover { opacity: 0.6; color: #fff; }
@@ -75,7 +82,7 @@ button.btn.active:focus { outline: 0; opacity: 0.6; color: #fff; }
 
 button.btn.btn-next,
 button.btn.btn-next:focus,
-button.btn.btn-next:active:focus, button.btn.btn-next.active:focus { background: #f35b3f; }
+button.btn.btn-next:active:focus, button.btn.btn-next.active:focus { background: $green; font-family: 'montserratbold';}
 
 button.btn.btn-submit,
 button.btn.btn-submit:focus,
@@ -89,17 +96,27 @@ button.btn.btn-previous:active:focus, button.btn.btn-previous.active:focus { bac
 //aceptar
 
 .accept{
+  text-align: center;
+  @include breakpoint(small){
+    padding-left: 10px;
+  }
   input[type=checkbox] {
     opacity: 0;
     float:left;
   }
   input[type=checkbox] + label {
-    margin: 0 0 0 20px;
+    margin: 0 0 0 30px;//20
     position: relative;
     cursor: pointer;
-    font-size: 16px;
-    font-family: monospace;
+    font-family: 'montserratbold';
     float: left;
+    color:$green;
+    font-size: 0.8em;
+    text-align: left;
+    @include breakpoint(small){
+      margin-left: 1px;
+      margin-top: 1em;
+    }
   }
 
   input[type=checkbox] + label ~ label {
@@ -109,25 +126,29 @@ button.btn.btn-previous:active:focus, button.btn.btn-previous.active:focus { bac
   input[type=checkbox] + label::before {
     content: ' ';
     position: absolute;
-    left: -35px;
-    top: -3px;
+    left: -30px;//35
+    top: 5px;
     width: 25px;
     height: 25px;
     display: block;
     background: #c1c5d0;
     border-radius:3px;
+    @include breakpoint(small){
+      top:-2px;
+      left: -35px;
+    }
   }
 
   input[type=checkbox] + label::after {
     content: ' ';
     position: absolute;
-    left: -35px;
-    top: -3px;
-    width: 23px;
-    height: 23px;
+    left: -30px;//35
+    top: 5px;
+    width: 25px;
+    height: 25px;
     display: block;
     z-index: 1;
-    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjE4MS4yIDI3MyAxNyAxNiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAxODEuMiAyNzMgMTcgMTYiPjxwYXRoIGQ9Ik0tMzA2LjMgNTEuMmwtMTEzLTExM2MtOC42LTguNi0yNC04LjYtMzQuMyAwbC01MDYuOSA1MDYuOS0yMTIuNC0yMTIuNGMtOC42LTguNi0yNC04LjYtMzQuMyAwbC0xMTMgMTEzYy04LjYgOC42LTguNiAyNCAwIDM0LjNsMjMxLjIgMjMxLjIgMTEzIDExM2M4LjYgOC42IDI0IDguNiAzNC4zIDBsMTEzLTExMyA1MjQtNTI0YzctMTAuMyA3LTI1LjctMS42LTM2eiIvPjxwYXRoIGZpbGw9IiMzNzM3MzciIGQ9Ik0xOTcuNiAyNzcuMmwtMS42LTEuNmMtLjEtLjEtLjMtLjEtLjUgMGwtNy40IDcuNC0zLjEtMy4xYy0uMS0uMS0uMy0uMS0uNSAwbC0xLjYgMS42Yy0uMS4xLS4xLjMgMCAuNWwzLjMgMy4zIDEuNiAxLjZjLjEuMS4zLjEuNSAwbDEuNi0xLjYgNy42LTcuNmMuMy0uMS4zLS4zLjEtLjV6Ii8+PHBhdGggZD0iTTExODcuMSAxNDMuN2wtNTYuNS01Ni41Yy01LjEtNS4xLTEyLTUuMS0xNy4xIDBsLTI1My41IDI1My41LTEwNi4yLTEwNi4yYy01LjEtNS4xLTEyLTUuMS0xNy4xIDBsLTU2LjUgNTYuNWMtNS4xIDUuMS01LjEgMTIgMCAxNy4xbDExNC43IDExNC43IDU2LjUgNTYuNWM1LjEgNS4xIDEyIDUuMSAxNy4xIDBsNTYuNS01Ni41IDI2Mi0yNjJjNS4yLTMuNCA1LjItMTIgLjEtMTcuMXpNMTYzNC4xIDE2OS40bC0zNy43LTM3LjdjLTMuNC0zLjQtOC42LTMuNC0xMiAwbC0xNjkuNSAxNjkuNS03MC4yLTcxLjljLTMuNC0zLjQtOC42LTMuNC0xMiAwbC0zNy43IDM3LjdjLTMuNCAzLjQtMy40IDguNiAwIDEybDc3LjEgNzcuMSAzNy43IDM3LjdjMy40IDMuNCA4LjYgMy40IDEyIDBsMzcuNy0zNy43IDE3NC43LTE3Ni40YzEuNi0xLjcgMS42LTYuOS0uMS0xMC4zeiIvPjwvc3ZnPg==') no-repeat center center;
+    background: white url('../img/check.svg') no-repeat center center;
     -ms-transition: all .2s ease;
     -webkit-transition: all .2s ease;
     transition: all .3s ease;
@@ -135,6 +156,10 @@ button.btn.btn-previous:active:focus, button.btn.btn-previous.active:focus { bac
     -webkit-transform: scale(0);
     transform: scale(0);
     opacity: 0;
+    @include breakpoint(small){
+      top:-2px;
+      left: -35px;
+    }
   }
 
   input[type=checkbox]:checked + label::after {
@@ -145,7 +170,82 @@ button.btn.btn-previous:active:focus, button.btn.btn-previous.active:focus { bac
   }
 }
 
+.condiciones{
+    margin: 1em 0 4em 0 ;
+  #toggleButton{
+    color:$primary-color;
+    text-decoration: underline;
+    font-family: 'montserratbold';
+    font-size: 0.7em;
+    text-align: center;
+    display: block;
+    padding-bottom: 1em;
+    @include breakpoint(small){
+      text-align: left;
+      margin-left: 25px;
+    }
+    @include breakpoint(medium){
+      position: relative;
+      left: -10px;
+      margin-left: 0;
+      font-size: 0.8em;
+    }
+  }
+  #disclaimer{
+    display: none;
 
+    #disclaimer-text{
+      -webkit-box-shadow: inset 0px 0px 5px 0px rgba(192,197,208,1);
+      -moz-box-shadow: inset 0px 0px 5px 0px rgba(192,197,208,1);
+      box-shadow: inset 0px 0px 5px 0px rgba(192,197,208,1);
+      padding: 15px;
+      height: 300px;
+      overflow-y: scroll;
+    }
+    p{
+      font-family: 'montserratlight';
+      font-size: 0.7em;
+      text-align: left;
+      color:#959CAE;
+      @include breakpoint(medium){
+        font-size: 0.85em;
+        margin-bottom: 1.4em;
+      }
+    }
+    a#closer{
+      /* Rectangle 2: */
+      position: relative;
+      top: 38px;
+      left: 33%;
+      border-top: none;
+      border-left: 1px solid #E6E7E8;
+      border-right: 1px solid #E6E7E8;
+      border-bottom: 1px solid #E6E7E8;
+      border-radius: 0 0 10px 10px;
+      padding: 15px;
+      /* cerrar: */
+      font-family: 'montserratregular';
+      font-size: 13px;
+      color: #A263B8;
+      letter-spacing: 0;
+      line-height: 16px;
+      /* Imported Layers Copy 2: */
+      transform: rotate(90deg);
+      background: #C0C5D0;
+      //border: 1px solid #C0C5D0;
+      /* Oval: */
+      //border: 1px solid #C0C5D0;
+      margin: 0 auto;
+      padding-top: 40px;
+      text-decoration: underline;
+      background:transparent url('../img/closer.png') center 10px no-repeat;
+      @include breakpoint(small){
+        left: 45%;
+        cursor: pointer;
+      }
+    }
+  }
+}
 
 /***** Top menu *****/
 
@@ -200,6 +300,36 @@ ul.navbar-nav {
 
 .form-box { padding: 0px; }
 
+.form-box{
+  h4{
+    color: $primary-color;
+    margin: 1em 0;
+    text-align: center;
+    @include breakpoint(small){
+      text-align: left;
+    }
+  }
+  .text-step{
+    color: $primary-color;
+    margin: 1em 0;
+    font-size: 1em;
+    text-align: center;
+    @include breakpoint(small){
+      text-align: left;
+      font-size: 0.9em;
+    }
+    @include breakpoint(medium){
+      width: 80%;
+    }
+    @include breakpoint(large){
+      width: 80%;
+      line-height: 28px;
+      font-size: 1.1em;
+    }
+  }
+}
+
+
 
 .form-box-pl{
   padding: 0;
@@ -239,7 +369,7 @@ ul.navbar-nav {
     top: 48px;
   }
 }
-.f1-progress-line { position: absolute; top: 0; left: 0; height: 1px; background: #f35b3f; }
+.f1-progress-line { position: absolute; top: 0; left: 0; height: 1px; background: $primary-color; }
 
 .f1-step { position: relative; float: left; width: 33.333333%; padding: 0 5px; }
 
@@ -250,10 +380,10 @@ ul.navbar-nav {
   margin: 0 auto;
 }
 .f1-step.activated .f1-step-icon {
-  background: #fff; border: 1px solid #f35b3f; color: #f35b3f; line-height: 38px;
+  background: #fff; border: 1px solid $primary-color; color: $primary-color; line-height: 38px;
 }
 .f1-step.active .f1-step-icon {
-  width: 20px; height: 20px; margin-top: 0; background: #f35b3f; font-size: 22px; line-height: 20px;
+  width: 20px; height: 20px; margin-top: 0; background: $primary-color; font-size: 22px; line-height: 20px;
 }
 
 .f1-step p { 
@@ -268,16 +398,58 @@ ul.navbar-nav {
     font-size: 1.3em;
   } 
 }
-.f1-step.activated p { color: #f35b3f; }
-.f1-step.active p { color: #f35b3f;  font-family: 'montserratblack'; }
+.f1-step.activated p { color: $primary-color; }
+.f1-step.active p { color: $primary-color;  font-family: 'montserratblack'; }
 
 .f1 fieldset { display: none; text-align: left; }
 
-.f1-buttons { text-align: right; }
+.f1-buttons { text-align: center; clear:both; }
 
-.f1 .input-error { border-color: #f35b3f; }
+.f1 .input-error { 
+  border: 2px solid $primary-color;
 
+}
 
+.error-text {
+  color:red;
+  display: block;
+}
+
+.error{
+  display: none; 
+}
+
+// .error-text { 
+//   color:red;
+//   display: block; 
+// }
+
+.remove_field{
+  font-size: 30px;
+    position: relative;
+    margin-left: 45%;
+    @include breakpoint(small){
+      position: static;
+      margin-left: 0;
+    }
+  i{
+    color: $primary-color;
+  }
+}
+
+fieldset{
+  .text-rosa{
+    // float: right;
+    font-family: 'montserratbold';
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .signo-mas{
+    font-size: 2em;
+    color: $green;
+  }
+}
 
 /***** Media queries *****/
 
