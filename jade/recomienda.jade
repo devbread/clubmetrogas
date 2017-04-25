@@ -120,40 +120,27 @@ html.no-js(lang='es')
                         .input_fields_wrap
                           //- <button class="add_field_button">Add More Fields</button>
                           div
-                            .ed-item.base-100.formulario-direcciones
-                              #formulario-comprobante.ed-container
-                                .ed-item.base-100.web-30.no-padding
-                                  input(type='text', placeholder='Nombre', name='nombre')
-                                .ed-item.base-100.web-30.no-padding
-                                  input(type='text', placeholder='Apellido', name='apellido')
-                                .ed-item.base-100.web-30.no-padding
-                                  input#xemail.validate(type='email', placeholder='Email', name='xemail', required='')
-                            .col-xs-12.col-sm-6.col-lg-2
-                              .form-group
-                                label.sr-only(for='f1-first-name') Nombre
-                                input#f1-first-name.f1-first-name.form-control(type='text', name='f1-first-name', placeholder='Nombre')
-                            .col-xs-12.col-sm-6.col-lg-2
-                              .form-group
-                                label.sr-only(for='f1-last-name') Apellido
-                                input#f1-last-name.f1-last-name.form-control(type='text', name='f1-last-name', placeholder='Apellido')
-                            .col-xs-12.col-sm-4.col-md-4.col-lg-2
-                              .form-group
-                                label.sr-only(for='f1-email') Email
-                                input#f1-email.f1-email.form-control(type='text', name='f1-email', placeholder='Email...')
-                            .col-xs-12.col-sm-4.col-md-4.col-lg-2
-                              .form-group
-                                label.sr-only(for='f1-email') Confirma tu Email
-                                input#f1-email.f1-email.form-control(type='text', name='f1-email', placeholder='Confirma tu email')
-                            .col-xs-12.col-sm-3.col-md-3.col-lg-3
-                              .form-group
-                                label.sr-only(for='f1-email') RUT
-                                input#f1-first-name.f1-first-name.form-control(type='text', name='f1-first-name', placeholder='Confirma tu email')
-                        .ed-container.barra-formulario.main-center
-                          .ed-item.base-100.web-75.agregar-direcciones
-                            p.text-rosa agregar más amigos
-                            a.signo-mas.add_field_button(href='#')
-                              i.ion-plus-circled
-
+                            .row(style="position:relative;")
+                              .col-xs-12.col-sm-6.col-lg-2
+                                .form-group
+                                  label.sr-only(for='f1-first-name') Nombre
+                                  input#f1-first-name.f1-first-name.form-control(type='text', name='f1-first-name', placeholder='Nombre')
+                              .col-xs-12.col-sm-6.col-lg-2
+                                .form-group
+                                  label.sr-only(for='f1-last-name') Apellido
+                                  input#f1-last-name.f1-last-name.form-control(type='text', name='f1-last-name', placeholder='Apellido')
+                              .col-xs-12.col-sm-4.col-md-4.col-lg-2
+                                .form-group
+                                  label.sr-only(for='f1-email') Email
+                                  input#f1-email.f1-email.form-control(type='text', name='f1-email', placeholder='Email...')
+                              .col-xs-12.col-sm-4.col-md-4.col-lg-2
+                                .form-group
+                                  label.sr-only(for='f1-email') Confirma tu Email
+                                  input#f1-email.f1-email.form-control(type='text', name='f1-email', placeholder='Confirma tu email')
+                              .col-xs-12.col-sm-3.col-md-3.col-lg-3
+                                .form-group
+                                  label.sr-only(for='f1-email') RUT
+                                  input#f1-first-name.f1-first-name.form-control(type='text', name='f1-first-name', placeholder='Confirma tu email')
 
                       .col-xs-12
                         .add-button

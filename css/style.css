@@ -6542,9 +6542,6 @@ ul.navbar-nav {
       width: 80%;
       line-height: 28px;
       font-size: 1.1em; } }
-.form-box .signo-mas {
-  font-size: 2em;
-  color: #8639ab; }
 
 .form-box-pl {
   padding: 0; }
@@ -6667,6 +6664,25 @@ ul.navbar-nav {
 
 .error {
   display: none; }
+
+.remove_field {
+  font-size: 30px;
+  position: relative;
+  margin-left: 45%; }
+  @media (min-width: 768px) {
+    .remove_field {
+      position: static;
+      margin-left: 0; } }
+  .remove_field i {
+    color: #8639ab; }
+
+fieldset .text-rosa {
+  font-family: 'montserratbold';
+  font-size: 1em;
+  text-align: center; }
+fieldset .signo-mas {
+  font-size: 2em;
+  color: #b8cd16; }
 
 /***** Media queries *****/
 @media (max-width: 767px) {
