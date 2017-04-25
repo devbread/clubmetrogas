@@ -6679,10 +6679,17 @@ ul.navbar-nav {
 fieldset .text-rosa {
   font-family: 'montserratbold';
   font-size: 1em;
-  text-align: center; }
+  text-align: center;
+  color: #b8cd16;
+  margin-bottom: 0;
+  margin-top: 10px; }
 fieldset .signo-mas {
   font-size: 2em;
-  color: #b8cd16; }
+  color: #b8cd16;
+  width: 100%;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px; }
 
 /***** Media queries *****/
 @media (max-width: 767px) {
