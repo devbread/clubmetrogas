@@ -29,13 +29,17 @@ footer{
 		}
 	}
 
-	.flecha-Right{
+	a.flecha-Right{
 		display: none;
 		@include breakpoint(small){
 			display: block;
 			position: absolute;
 			right: 20px;
 			top: 35px;
+			width: 45px;
+			height: auto;
+			border-bottom: none;
+			padding: 0;
 			& img{
 				width: 25px;
 			}

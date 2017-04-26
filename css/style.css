@@ -5905,15 +5905,19 @@ footer {
         footer a img {
           width: 20%;
           float: left; } }
-  footer .flecha-Right {
+  footer a.flecha-Right {
     display: none; }
     @media (min-width: 768px) {
-      footer .flecha-Right {
+      footer a.flecha-Right {
         display: block;
         position: absolute;
         right: 20px;
-        top: 35px; }
-        footer .flecha-Right img {
+        top: 35px;
+        width: 45px;
+        height: auto;
+        border-bottom: none;
+        padding: 0; }
+        footer a.flecha-Right img {
           width: 25px; } }
   footer a.linkFoot {
     text-align: center;
@@ -6223,6 +6227,93 @@ footer {
         text-align: left;
         font-size: 0.65em; } }
 
+.final {
+  height: 900px;
+  padding: 20px;
+  background: #cb9cdb;
+  /* old browsers */
+  background-image: url(../img/nina-final.png), -webkit-linear-gradient(294deg, #8639AA 0%, #CB9CDB 100%);
+  background-image: url(../img/nina-final.png), linear-gradient(-204deg, #8639AA 0%, #CB9CDB 100%);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .final {
+      background: #cb9cdb;
+      /* old browsers */
+      background-image: url(../img/final-desk.png), -webkit-linear-gradient(294deg, #8639AA 0%, #CB9CDB 100%);
+      background-image: url(../img/final-desk.png), linear-gradient(-204deg, #8639AA 0%, #CB9CDB 100%);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background-repeat: no-repeat;
+      background-position: center -30px;
+      text-align: left;
+      padding: 0;
+      background-size: 132%;
+      height: auto; } }
+  @media (min-width: 992px) {
+    .final {
+      background-size: 110%;
+      background-image: url(../img/final-desk.png), -webkit-linear-gradient(294deg, #8639AA 0%, #CB9CDB 100%);
+      background-image: url(../img/final-desk.png), linear-gradient(-204deg, #8639AA 0%, #CB9CDB 100%);
+      background-position: 0; } }
+  @media (min-width: 1200px) {
+    .final {
+      background: #cb9cdb;
+      /* old browsers */
+      background-image: url(../img/final-desk.png), -webkit-linear-gradient(294deg, #8639AA 0%, #CB9CDB 100%);
+      background-image: url(../img/final-desk.png), linear-gradient(-204deg, #8639AA 0%, #CB9CDB 100%);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100%;
+      text-align: left;
+      height: 500px; } }
+  @media (min-width: 768px) {
+    .final .claim-final {
+      padding: 40px 80px; } }
+  .final .claim-final .final-title-1 {
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'montserratblack';
+    text-transform: uppercase; }
+    @media (min-width: 768px) {
+      .final .claim-final .final-title-1 {
+        display: block; } }
+  .final .claim-final h1 {
+    font-size: 3em;
+    font-family: 'montserratblack';
+    text-align: center;
+    color: #ffffff; }
+  .final .claim-final p {
+    color: #ffffff;
+    line-height: 25px; }
+    .final .claim-final p span {
+      display: block; }
+    @media (min-width: 768px) {
+      .final .claim-final p {
+        text-align: center; } }
+  .final .claim-final .bold {
+    font-size: 1.2em;
+    font-family: 'montserratblack';
+    text-align: center;
+    color: #ffffff;
+    margin: 22px 0; }
+  .final .claim-final .inscribete {
+    border-radius: 10px;
+    background-color: #8639ab;
+    padding: 20px 10px;
+    color: #ffffff;
+    display: block;
+    font-family: 'montserratbold';
+    margin: 1.5em 0 1em 0; }
+    @media (min-width: 768px) {
+      .final .claim-final .inscribete {
+        width: 277px;
+        text-align: center;
+        margin: 0 auto; } }
+
 @font-face {
   font-family: 'montserratblack';
   src: url("../fonts/montserrat-black-webfont.woff2") format("woff2"), url("../fonts/montserrat-black-webfont.woff") format("woff"), url("../fonts/montserrat-black-webfont.ttf") format("truetype"), url("../fonts/montserrat-black-webfont.svg#montserratblack") format("svg");
@@ -6295,15 +6386,21 @@ textarea.form-control:focus {
 
 input[type="text"]:-moz-placeholder, input[type="password"]:-moz-placeholder,
 textarea:-moz-placeholder, textarea.form-control:-moz-placeholder {
-  color: #888; }
+  color: #888;
+  font-family: 'montserratregular';
+  font-size: 0.7em; }
 
 input[type="text"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder,
 textarea:-ms-input-placeholder, textarea.form-control:-ms-input-placeholder {
-  color: #888; }
+  color: #888;
+  font-family: 'montserratregular';
+  font-size: 0.7em; }
 
 input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeholder {
-  color: #888; }
+  color: #888;
+  font-family: 'montserratregular';
+  font-size: 0.7em; }
 
 label {
   font-weight: 300; }
@@ -6368,7 +6465,8 @@ button.btn.btn-next:active:focus, button.btn.btn-next.active:focus {
 button.btn.btn-submit,
 button.btn.btn-submit:focus,
 button.btn.btn-submit:active:focus, button.btn.btn-submit.active:focus {
-  background: #f35b3f; }
+  background: #b8cd16;
+  font-family: 'montserratbold'; }
 
 button.btn.btn-previous,
 button.btn.btn-previous:focus,
@@ -6732,6 +6830,18 @@ ul.navbar-nav {
 .f1 .input-error {
   border: 2px solid #8639ab; }
 
+.end {
+  clear: both;
+  margin-top: 40px; }
+  @media (min-width: 768px) {
+    .end {
+      margin-top: 0; } }
+
+@media (min-width: 768px) {
+  .endButton {
+    width: 70% !important;
+    float: right; } }
+
 .error-text {
   color: red;
   display: block; }
@@ -6750,13 +6860,30 @@ ul.navbar-nav {
   .remove_field i {
     color: #8639ab; }
 
+fieldset .add-button {
+  position: relative; }
+  @media (min-width: 768px) {
+    fieldset .add-button {
+      margin-bottom: 4em; } }
 fieldset .text-rosa {
   font-family: 'montserratbold';
   font-size: 1em;
   text-align: center;
   color: #b8cd16;
   margin-bottom: 0;
-  margin-top: 10px; }
+  margin-top: 10px;
+  text-decoration: underline; }
+  @media (min-width: 768px) {
+    fieldset .text-rosa {
+      float: right;
+      margin-right: 20px;
+      font-size: 0.9em; } }
+  @media (min-width: 992px) {
+    fieldset .text-rosa {
+      margin-right: 25px; } }
+  @media (min-width: 1200px) {
+    fieldset .text-rosa {
+      margin-right: 40px; } }
 fieldset .signo-mas {
   font-size: 2em;
   color: #b8cd16;
@@ -6764,6 +6891,241 @@ fieldset .signo-mas {
   display: block;
   text-align: center;
   margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    fieldset .signo-mas {
+      position: absolute;
+      right: -15px;
+      width: 5%;
+      top: -2px; } }
+
+fieldset .final {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #A263B8;
+  position: relative;
+  z-index: 1;
+  background-image: url(../img/nina-alone.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 750px; }
+  @media (min-width: 768px) {
+    fieldset .final {
+      height: auto;
+      border-radius: 10px;
+      background-position: right bottom;
+      background-repeat: no-repeat;
+      background-size: 40%;
+      height: 350px; } }
+  @media (min-width: 1200px) {
+    fieldset .final {
+      height: 430px;
+      background-image: url(../img/nina-alone-desktop.png);
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: 100%; } }
+  fieldset .final:before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    background-color: #A263B8;
+    top: 0;
+    left: -28px;
+    right: 0;
+    bottom: 0;
+    z-index: -1; }
+    @media (min-width: 768px) {
+      fieldset .final:before {
+        display: none; } }
+  fieldset .final:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    background-color: #A263B8;
+    top: 0;
+    right: -28px;
+    bottom: 0;
+    z-index: -1; }
+    @media (min-width: 768px) {
+      fieldset .final:after {
+        display: none; } }
+  fieldset .final .thanks {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'montserratblack';
+    font-size: 1.3em; }
+    @media (min-width: 768px) {
+      fieldset .final .thanks {
+        text-align: left;
+        font-size: 1.8em;
+        width: 58%; } }
+    @media (min-width: 1200px) {
+      fieldset .final .thanks {
+        font-size: 36px;
+        width: 40%; } }
+  fieldset .final .text-step {
+    font-family: 'montserratregular';
+    font-size: 1em;
+    text-align: center;
+    color: #ffffff; }
+    @media (min-width: 768px) {
+      fieldset .final .text-step {
+        font-size: 0.8em;
+        text-align: left;
+        width: 60%; } }
+    @media (min-width: 1200px) {
+      fieldset .final .text-step {
+        width: 49%;
+        font-size: 1em; } }
+  fieldset .final .text-step-last {
+    font-family: 'montserratblack';
+    font-size: 1em;
+    text-align: center;
+    color: #ffffff; }
+    fieldset .final .text-step-last a {
+      color: #ffffff;
+      text-decoration: underline; }
+    @media (min-width: 768px) {
+      fieldset .final .text-step-last {
+        width: 60%;
+        text-align: left; } }
+fieldset .final-list {
+  display: none; }
+  @media (min-width: 768px) {
+    fieldset .final-list {
+      display: block;
+      margin: 40px 0px 20px 0px; } }
+  fieldset .final-list .final-list-title-top {
+    font-family: 'montserratbold';
+    font-size: 0.9em;
+    text-align: left;
+    color: #8639ab; }
+fieldset .final-list-data {
+  margin: 40px 0;
+  position: relative; }
+  fieldset .final-list-data .number {
+    position: absolute;
+    color: #8639ab;
+    font-family: 'montserratblack';
+    font-size: 2em;
+    top: -5px; }
+    @media (min-width: 768px) {
+      fieldset .final-list-data .number {
+        position: static;
+        font-size: 0.9em;
+        text-align: center;
+        width: 100%;
+        display: block; } }
+  fieldset .final-list-data .final-list-title {
+    margin-left: 35px;
+    font-family: 'montserratregular';
+    font-size: 1em;
+    text-align: left;
+    color: #959CAE; }
+    @media (min-width: 768px) {
+      fieldset .final-list-data .final-list-title {
+        margin-left: 0;
+        font-size: 0.9em; } }
+  fieldset .final-list-data .table-bordered {
+    border: none; }
+  fieldset .final-list-data .table-striped {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center; }
+  fieldset .final-list-data .table-striped > tbody > tr:nth-of-type(odd) {
+    border: none; }
+  fieldset .final-list-data .table-bordered > tbody > tr > th, fieldset .final-list-data .table-bordered > tbody > tr > td, fieldset .final-list-data .table-bordered > tfoot > tr > th, fieldset .final-list-data .table-bordered > tfoot > tr > td {
+    border: none; }
+  fieldset .final-list-data .table-bordered > thead.cf > tr {
+    height: 50px; }
+  fieldset .final-list-data .table-bordered > thead.cf > tr > th {
+    color: #8639ab;
+    text-align: center; }
+  fieldset .final-list-data .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: transparent; }
+  fieldset .final-list-data .table-bordered > thead > tr > th, fieldset .final-list-data .table-bordered > thead > tr > td {
+    border: none; }
+  fieldset .final-list-data #no-more-tables td {
+    color: #959CAE; }
+    fieldset .final-list-data #no-more-tables td span {
+      color: #8639ab;
+      font-family: 'montserratblack'; }
+  @media only screen and (max-width: 500px) {
+    fieldset .final-list-data {
+      /* Force table to not be like tables anymore */
+      /* Hide table headers (but not display: none;, for accessibility) */
+      /*
+      Label the data
+      */ }
+      fieldset .final-list-data #no-more-tables table,
+      fieldset .final-list-data #no-more-tables thead,
+      fieldset .final-list-data #no-more-tables tbody,
+      fieldset .final-list-data #no-more-tables th,
+      fieldset .final-list-data #no-more-tables td,
+      fieldset .final-list-data #no-more-tables tr {
+        display: block; }
+      fieldset .final-list-data #no-more-tables thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        background: transparent !important; }
+      fieldset .final-list-data .lastPosAbs {
+        position: relative; }
+      fieldset .final-list-data #no-more-tables td {
+        /* Behave  like a "row" */
+        border: none;
+        position: relative;
+        white-space: normal;
+        text-align: left;
+        padding-left: 25px;
+        color: #959CAE; } }
+    @media only screen and (max-width: 500px) and (min-width: 768px) {
+      fieldset .final-list-data #no-more-tables td {
+        color: #959CAE; } }
+  @media only screen and (max-width: 500px) {
+        fieldset .final-list-data #no-more-tables td span {
+          position: absolute;
+          left: 0;
+          top: 8px;
+          font-size: 2em;
+          color: #8639ab; }
+      fieldset .final-list-data #no-more-tables td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold; }
+      fieldset .final-list-data #no-more-tables td:before {
+        content: attr(data-title); } }
+fieldset .whatDo {
+  width: 100%;
+  margin: 40px 0 50px 0;
+  float: left;
+  text-align: center;
+  clear: both; }
+  fieldset .whatDo .whatDo_action {
+    background-color: #C0C5D0;
+    color: #ffffff;
+    font-family: 'montserratbold';
+    font-size: 0.8em;
+    border-radius: 10px;
+    padding: 20px 10px;
+    display: block; }
+    fieldset .whatDo .whatDo_action span {
+      display: none; }
+      @media (min-width: 768px) {
+        fieldset .whatDo .whatDo_action span {
+          display: inline-block; } }
+    @media (min-width: 768px) {
+      fieldset .whatDo .whatDo_action {
+        font-size: 0.9em; } }
 
 /***** Media queries *****/
 @media (max-width: 767px) {
