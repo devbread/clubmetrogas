@@ -1,0 +1,278 @@
+$dark-blue: #8639ab;
+$green: #CB9CDB;
+$action-color: $green;
+$green-button: #7ED321;
+$green: #CB9CDB;
+$action-color: $green;
+
+.svg-filters {
+  position: absolute;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+%button {
+  -webkit-font-smoothing: antialiased;
+  background-color: $dark-blue;
+  border: none;
+  display: inline-block;
+  font-family: 'montserratbold', sans-serif;
+  font-size: 1.2em;
+  text-decoration: none;
+  user-select: none;
+  letter-spacing: 0.1em;
+  color: white;
+  border-radius:10px !important;
+  padding: 15px 40px;
+  text-transform: capitalize;
+  @include transition(background-color 0.1s ease-out);
+
+  &:hover {
+    color: #fff;
+  }
+
+  &:focus {
+    outline: none;
+    color: #fff;
+  }
+}
+
+.button,
+.button__bg {
+  .safari & {
+    -webkit-filter: none!important;
+    filter: none!important;
+  }
+}
+button.button--1{
+  background-color: $dark-blue;
+}
+.button--1 {
+  position: relative;
+  @extend %button;
+  background: none;
+  z-index: 0;
+  width: 100%;
+  border-radius:10px !important;
+  margin-top: 10px;
+
+  &:hover {
+    background: none;
+  }
+
+  &:hover .circle {
+    background: $dark-blue;
+  }
+
+  &:hover .button__bg {
+    background: $dark-blue;
+  }
+
+  .button__container {
+    position: absolute;
+    display: block;
+    width: 200%;
+    height: 400%;
+    top: -150%;
+    left: -50%;
+    pointer-events: none;
+    z-index: -1;
+    @include transform(translateZ(0));
+    @include transition(all 0.1s ease-out);
+  }
+
+  // .button__bg, .circle {
+  //   @include animation(hue-rotate 10s linear infinite);
+  // }
+
+  .button__bg {
+    position: absolute;
+    @extend %button;
+    width: 50%;
+    height: 25%;
+    top: 50%;
+    left: 25%;
+    @include transform(translateY(-50%));
+  }
+
+  .circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    background:$dark-blue;
+    @include transition(background-color 0.1s ease-out);
+
+    &.top-left {
+      top: 40%;
+      left: 27%;
+    }
+
+    &.bottom-right {
+      bottom: 40%;
+      right: 27%;
+    }
+  }
+}
+button.button--2{
+  background-color: $green-button !important;
+}
+.button--2 {
+
+  position: relative;
+  @extend %button;
+  background: none;
+  z-index: 0;
+  width: 100%;
+  border-radius:10px !important;
+  margin-top: 10px;
+
+  &:hover {
+    background: none;
+  }
+
+  &:hover .circle {
+    background: $green-button;
+  }
+
+  &:hover .button__bg {
+    background: $green-button;
+  }
+
+  .button__container {
+    position: absolute;
+    display: block;
+    width: 200%;
+    height: 400%;
+    top: -150%;
+    left: -50%;
+    pointer-events: none;
+    z-index: -1;
+    @include transform(translateZ(0));
+    @include transition(all 0.1s ease-out);
+  }
+
+  // .button__bg, .circle {
+  //   @include animation(hue-rotate 10s linear infinite);
+  // }
+
+  .button__bg {
+    background: $green-button;
+    position: absolute;
+    @extend %button;
+    width: 50%;
+    height: 25%;
+    top: 50%;
+    left: 25%;
+    @include transform(translateY(-50%));
+  }
+
+  .circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+    background: $green-button;
+    @include transition(background-color 0.1s ease-out);
+
+    &.top-left {
+      top: 40%;
+      left: 27%;
+    }
+
+    &.bottom-right {
+      bottom: 40%;
+      right: 27%;
+    }
+  }
+}
+
+
+.button--4 {
+  position: relative;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  padding: 0;
+  @extend %button;
+  background: none;
+
+  &:hover {
+    background: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active .button__bg {
+    transform: scale(0.8);
+  }
+
+  .button__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: 90px solid transparent!important; // this makes the area of effect of the filter bigger. This doesn't change anything on Firefox.
+    @extend %button;
+    padding: 0;
+    border-radius: 100px;
+    @include transform(translateZ(0));
+    background: none;
+    font-weight: bold;
+    z-index: -2;
+    @include transition(all 0.1s ease-out);
+
+    &:hover {
+      background: none;
+    }
+  }
+
+  .blob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 70px;
+    opacity: 0.3;
+    background: $dark-blue;
+    @include transition(background 0.1s ease-out);
+    z-index: -1;
+    pointer-events: none;
+
+    &:first-child {
+      opacity: 1;
+    }
+
+    &:nth-child(n+2) {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+
+
+@keyframes hue-rotate {
+  from {
+    -webkit-filter: hue-rotate(0);
+    -moz-filter: hue-rotate(0);
+    -ms-filter: hue-rotate(0);
+    filter: hue-rotate(0);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    -moz-filter: hue-rotate(360deg);
+    -ms-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
