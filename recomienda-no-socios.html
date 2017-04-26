@@ -16,7 +16,7 @@
       <div class="row">
         <div class="container">
           <div class="row">
-            <div class="preheader">
+            <div id="top" class="preheader">
               <div class="col-md-6"><a href="#" class="linkTop">ir al club Metrogas: <span>metrogas.cl/club</span></a></div>
               <div class="col-md-6">
                 <ul class="secondary-nav">
@@ -29,7 +29,7 @@
             </div>
             <header>
               <div class="row">
-                <div class="col-sm-12"><a href="#" class="logo"><img src="img/logo.png" alt="Metrogas Club" class="img-responsive"></a></div>
+                <div class="col-sm-12"><a href="http://www.metrogas.cl" target="_blank" class="logo"><img src="img/logo.png" alt="Metrogas Club" class="img-responsive"></a></div>
               </div>
             </header>
             <section class="wizard">
@@ -58,24 +58,36 @@
                       <div class="form-group">
                         <label for="f1-first-name" class="sr-only">Nombre</label>
                         <input id="f1-first-name" type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control">
+                        <div class="errorFields">
+                          <p>Debes ingresar tu nombre</p>
+                        </div>
                       </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 form-box-pr">
                       <div class="form-group">
                         <label for="f1-last-name" class="sr-only">Apellido</label>
                         <input id="f1-last-name" type="text" name="f1-last-name" placeholder="Apellido" class="f1-last-name form-control">
+                        <div class="errorFields er">
+                          <p>Debes ingresar tu apellido</p>
+                        </div>
                       </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 form-box-pl">
                       <div class="form-group">
                         <label for="f1-email" class="sr-only">Email</label>
                         <input id="f1-email" type="text" name="f1-email" placeholder="Email" class="f1-email form-control">
+                        <div class="errorFields">
+                          <p>Debes ingresar tu email</p>
+                        </div>
                       </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 form-box-pr">
                       <div class="form-group">
                         <label for="f1-email" class="sr-only">Confirma tu email</label>
                         <input id="f1-email" type="text" name="f1-email" placeholder="Confirma tu email" class="f1-email form-control">
+                        <div class="errorFields er">
+                          <p>Debes confirmar tu email</p>
+                        </div>
                       </div>
                     </div>
                     <div class="col-xs-12">
@@ -111,30 +123,45 @@
                               <div class="form-group">
                                 <label for="f1-first-name" class="sr-only">Nombre</label>
                                 <input id="f1-first-name" type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control">
+                                <div class="errorFields er">
+                                  <p>Debes ingresar su nombre</p>
+                                </div>
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-6 col-lg-2">
                               <div class="form-group">
                                 <label for="f1-last-name" class="sr-only">Apellido</label>
                                 <input id="f1-last-name" type="text" name="f1-last-name" placeholder="Apellido" class="f1-last-name form-control">
+                                <div class="errorFields er">
+                                  <p>Debes ingresar su apellido</p>
+                                </div>
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
                               <div class="form-group">
                                 <label for="f1-email" class="sr-only">Email</label>
-                                <input id="f1-email" type="text" name="f1-email" placeholder="Email..." class="f1-email form-control">
+                                <input id="f1-email" type="text" name="f1-email" placeholder="Email" class="f1-email form-control">
+                                <div class="errorFields er">
+                                  <p>Debes ingresar su email</p>
+                                </div>
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2">
                               <div class="form-group">
                                 <label for="f1-email" class="sr-only">Confirma tu Email</label>
                                 <input id="f1-email" type="text" name="f1-email" placeholder="Confirma tu email" class="f1-email form-control">
+                                <div class="errorFields er">
+                                  <p>Debes confirmar su email</p>
+                                </div>
                               </div>
                             </div>
                             <div class="col-xs-12 col-sm-3 col-md-3 col-lg-4">
                               <div class="form-group">
                                 <label for="f1-email" class="sr-only">RUT</label>
                                 <input id="f1-first-name" type="text" name="f1-first-name" placeholder="RUT" class="f1-first-name form-control">
+                                <div class="errorFields er">
+                                  <p>Debes ingresar su RUT </p>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -153,6 +180,10 @@
                   </fieldset>
                   <fieldset>
                     <div class="final">
+                      <p class="thanks">¡Gracias por recomendar a tus amigos!</p>
+                      <p class="text-step">¡Felicitaciones!, ya estás participando por tus Metropuntos.  Un mail de confirmación será enviado a ti y a tus invitados. </p>
+                      <p class="text-step">Recuerda que solo ganas cuando alguno de tus recomendados se hayan inscrito al Club. El abono de los Metropuntos ganados se realizará durante mayo.</p>
+                      <p class="text-step-last">¡No olvides hacerte socio  <a href="#">AQUÍ</a>  para poder ganar este premio y aprovechar toda la entretención del Club Metrogas!</p>
                     </div>
                     <div class="row">
                       <div class="col-md-12">
@@ -210,7 +241,7 @@
                         </div>
                       </div>
                       <div class="whatDo">
-                        <div class="col-xs-6 col-sm-3"><a onclick="return xepOnline.Formatter.Format('usage',{render:'download'});" href="#" class="whatDo_action">Descargar <span>PDF</span></a></div>
+                        <div class="col-xs-6 col-sm-3"><a href="#" onclick="return xepOnline.Formatter.Format('usage',{render:'download'});" class="whatDo_action">Descargar <span>PDF</span></a></div>
                         <div class="col-xs-6 col-sm-3"><a href="#" class="whatDo_action">Imprimir</a></div>
                         <div class="col-xs-12 col-sm-6">
                           <div class="f1-buttons end">
@@ -239,9 +270,7 @@
     <div class="container colorFull">
       <div class="row">
         <footer>
-          <div class="col-xs-12"><a href="#"><img src="img/logo.png" alt="Metrogas Club" class="img-responsive"></a>
-            <div class="flecha-Right"><img src="img/arrow-bttm.svg" alt="subir"></div>
-          </div>
+          <div class="col-xs-12"><a><img src="img/logo.png" alt="Metrogas Club" class="img-responsive"></a><a href="#top" class="flecha-Right"><img src="img/arrow-bttm.svg" alt="subir"></a></div>
           <div class="col-xs-12 col-sm-6"><a href="#" class="linkFoot">ir al sitio: <span>metrogas.cl/club</span></a></div>
           <div class="col-xs-12 col-sm-6">
             <ul class="navFoot">
@@ -254,7 +283,7 @@
             </ul>
           </div>
           <div class="col-xs-12">
-            <div class="upFooter"><a href="#" class="arrow"><img src="img/arrow-bttm.svg" alt="subir"></a></div>
+            <div class="upFooter"><a href="#top" class="arrow"><img src="img/arrow-bttm.svg" alt="subir"></a></div>
           </div>
         </footer>
       </div>
@@ -262,7 +291,6 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/jquery.backstretch.min.js"></script>
     <script src="js/xepOnline.jqPlugin.js"></script>
   </body>
 </html>

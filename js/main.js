@@ -32,14 +32,14 @@ jQuery(document).ready(function() {
     /*
         Fullscreen background
     */
-    $.backstretch("assets/img/backgrounds/1.jpg");
+    // $.backstretch("assets/img/backgrounds/1.jpg");
     
-    $('#top-navbar-1').on('shown.bs.collapse', function(){
-    	$.backstretch("resize");
-    });
-    $('#top-navbar-1').on('hidden.bs.collapse', function(){
-    	$.backstretch("resize");
-    });
+    // $('#top-navbar-1').on('shown.bs.collapse', function(){
+    // 	$.backstretch("resize");
+    // });
+    // $('#top-navbar-1').on('hidden.bs.collapse', function(){
+    // 	$.backstretch("resize");
+    // });
     
     /*
         Form
@@ -150,7 +150,8 @@ $(add_button).click(function(e){ //on add input button click
         if(x < max_fields){ //max input box allowed
                 x++; //text box increment
                 //$(wrapper).append('<div><div class="ed-item base-100 formulario-direcciones"><div id="formulario-comprobante" class="ed-container main-center"><div class="ed-item base-100 web-30 no-padding"><input type="text" placeholder="Nombre" name="nombre"></div><div class="ed-item base-100 web-30 no-padding"><input type="text" placeholder="Apellido" name="apellido"></div><div class="ed-item base-100 web-30 no-padding"><input type="email" placeholder="Email" type="email" placeholder="mail@ejemplo.com" class="validate" name="xemail" id="xemail" required></div><a href="#" class="remove_field"><i class="ion-close-circled"></i></a></div></div></div></div>'); //add input box
-                $(wrapper).append('<div><div class="row" style="position:relative;"><div class="col-xs-12 col-sm-6 col-lg-2"><div class="form-group"><label for="f1-first-name" class="sr-only">Nombre</label><input id="f1-first-name" type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control"/></div></div><div class="col-xs-12 col-sm-6 col-lg-2"><div class="form-group"><label for="f1-last-name" class="sr-only">Apellido</label><input id="f1-last-name" type="text" name="f1-last-name" placeholder="Apellido" class="f1-last-name form-control"/></div></div><div class="col-xs-12 col-sm-4 col-md-4 col-lg-2"><div class="form-group"><label for="f1-email" class="sr-only">Email</label><input id="f1-email" type="text" name="f1-email" placeholder="Email..." class="f1-email form-control"/></div></div><div class="col-xs-12 col-sm-4 col-md-4 col-lg-2"><div class="form-group"><label for="f1-email" class="sr-only">Confirma tu Email</label><input id="f1-email" type="text" name="f1-email" placeholder="Confirma tu email" class="f1-email form-control"/></div></div><div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"><div class="form-group"><label for="f1-email" class="sr-only">RUT</label><input id="f1-first-name" type="text" name="f1-first-name" placeholder="Confirma tu email" class="f1-first-name form-control"/></div></div><a href="#" class="remove_field"><i class="ion-close-circled"></i></a></row></div>'); //add input box
+                //$(wrapper).append('<div><div class="row" style="position:relative;"><div class="col-xs-12 col-sm-6 col-lg-2"><div class="form-group"><label for="f1-first-name" class="sr-only">Nombre</label><input id="f1-first-name" type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control"/></div></div><div class="col-xs-12 col-sm-6 col-lg-2"><div class="form-group"><label for="f1-last-name" class="sr-only">Apellido</label><input id="f1-last-name" type="text" name="f1-last-name" placeholder="Apellido" class="f1-last-name form-control"/></div></div><div class="col-xs-12 col-sm-4 col-md-4 col-lg-2"><div class="form-group"><label for="f1-email" class="sr-only">Email</label><input id="f1-email" type="text" name="f1-email" placeholder="Email..." class="f1-email form-control"/></div></div><div class="col-xs-12 col-sm-4 col-md-4 col-lg-2"><div class="form-group"><label for="f1-email" class="sr-only">Confirma tu Email</label><input id="f1-email" type="text" name="f1-email" placeholder="Confirma tu email" class="f1-email form-control"/></div></div><div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"><div class="form-group"><label for="f1-email" class="sr-only">RUT</label><input id="f1-first-name" type="text" name="f1-first-name" placeholder="Confirma tu email" class="f1-first-name form-control"/></div></div><a href="#" class="remove_field"><i class="ion-close-circled"></i></a></row></div>'); //add input box
+                $(wrapper).append('<div><div class="row" style="position:relative"> <div class="col-xs-12 col-sm-6 col-lg-2"> <div class="form-group"> <label for="f1-first-name" class="sr-only">Nombre</label> <input id="f1-first-name" type="text" name="f1-first-name" placeholder="Nombre" class="f1-first-name form-control"/> <div class="errorFields er"> <p>Debes ingresar su apellido</p> </div> </div> </div> <div class="col-xs-12 col-sm-6 col-lg-2"> <div class="form-group"> <label for="f1-last-name" class="sr-only">Apellido</label> <input id="f1-last-name" type="text" name="f1-last-name" placeholder="Apellido" class="f1-last-name form-control"/> <div class="errorFields er"> <p>Debes ingresar su apellido</p> </div> </div> </div> <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2"> <div class="form-group"> <label for="f1-email" class="sr-only">Email</label> <input id="f1-email" type="text" name="f1-email" placeholder="Email..." class="f1-email form-control"/> <div class="errorFields er"> <p>Debes ingresar su email</p> </div> </div> </div> <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2"> <div class="form-group"> <label for="f1-email" class="sr-only">Confirma tu Email</label> <input id="f1-email" type="text" name="f1-email" placeholder="Confirma tu email" class="f1-email form-control"/> <div class="errorFields er"> <p>Debes confirmar su email</p> </div> </div> </div> <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3"> <div class="form-group"> <label for="f1-email" class="sr-only">RUT</label> <input id="f1-first-name" type="text" name="f1-first-name" placeholder="Confirma tu email" class="f1-first-name form-control"/> <div class="errorFields er"> <p>Debes ingresar su RUT </p> </div> </div> </div> <a href="#" class="remove_field"> <i class="ion-close-circled"></i> </a> </row> </div>'); //add input box
         }
 });
 

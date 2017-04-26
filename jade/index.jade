@@ -18,7 +18,7 @@ html.no-js(lang='es')
       .row
         .container
           .row
-            .preheader
+            .preheader#top
               .col-md-6
                 a.linkTop(href="#") ir al club Metrogas: 
                   span metrogas.cl/club
@@ -33,7 +33,7 @@ html.no-js(lang='es')
             header
               .row
                 .col-sm-12
-                  a.logo(href="#")
+                  a.logo(href="http://www.metrogas.cl", target="_blank")
                     img.img-responsive(src="img/logo.png", alt="Metrogas Club")
             section.main
               .row
@@ -46,7 +46,10 @@ html.no-js(lang='es')
                     form.ingresa
                       h2 Ingresa tu RUT
                       input(type="text", placeholder="RUT:11111111-1")
+                      .errorRut
+                        p debes ingresar un RUT válido ej: 11111111.1
                       input(type="submit", value="Ingresar")
+
                   .recomendar.col-lg-8
                     .col-xs-12.col-sm-12.col-md-12
                       h3 Cómo recomendar a tus amigos paso a paso:
@@ -74,9 +77,9 @@ html.no-js(lang='es')
       .row
         footer
           .col-xs-12
-            a(href="#")
+            a()
               img.img-responsive(src="img/logo.png", alt="Metrogas Club")
-            .flecha-Right
+            a(href="#top").flecha-Right
                 img(src="img/arrow-bttm.svg", alt="subir")
               
           .col-xs-12.col-sm-6
@@ -95,7 +98,7 @@ html.no-js(lang='es')
 
           .col-xs-12
             .upFooter
-              a.arrow(href="#")
+              a.arrow(href="#top")
                 img(src="img/arrow-bttm.svg", alt="subir")
 
 

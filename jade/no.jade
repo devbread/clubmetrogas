@@ -18,9 +18,9 @@ html.no-js(lang='es')
       .row
         .container
           .row
-            .preheader#top
+            .preheader
               .col-md-6
-                a.linkTop(href="#") ir al club Metrogas: 
+                a.linkTop(href="http://www.metrogas.cl/club", target="_blank") ir al club Metrogas: 
                   span metrogas.cl/club
               .col-md-6
                 ul.secondary-nav
@@ -33,7 +33,7 @@ html.no-js(lang='es')
             header
               .row
                 .col-sm-12
-                  a.logo(href="http://www.metrogas.cl", target="_blank")
+                  a.logo(href="#")
                     img.img-responsive(src="img/logo.png", alt="Metrogas Club")
             section.wizard
                 .col-sm-12.form-box
@@ -59,26 +59,20 @@ html.no-js(lang='es')
                         .form-group
                           label.sr-only(for='f1-first-name') Nombre
                           input#f1-first-name.f1-first-name.form-control(type='text', name='f1-first-name', placeholder='Nombre')
-                          .errorFields
-                            p Debes ingresar tu nombre
+                          //- .error
+                          //-   |debe ingresar su nombre
                       .col-xs-12.col-sm-6.form-box-pr
                         .form-group
                           label.sr-only(for='f1-last-name') Apellido
                           input#f1-last-name.f1-last-name.form-control(type='text', name='f1-last-name', placeholder='Apellido')
-                          .errorFields.er
-                            p Debes ingresar tu apellido
                       .col-xs-12.col-sm-6.form-box-pl
                         .form-group
                           label.sr-only(for='f1-email') Email
                           input#f1-email.f1-email.form-control(type='text', name='f1-email', placeholder='Email')
-                          .errorFields
-                            p Debes ingresar tu email
                       .col-xs-12.col-sm-6.form-box-pr
                         .form-group
                           label.sr-only(for='f1-email') Confirma tu email
                           input#f1-email.f1-email.form-control(type='text', name='f1-email', placeholder='Confirma tu email')
-                          .errorFields.er
-                            p Debes confirmar tu email
                       .col-xs-12
                         .accept
                           fiedlset
@@ -107,32 +101,22 @@ html.no-js(lang='es')
                                 .form-group
                                   label.sr-only(for='f1-first-name') Nombre
                                   input#f1-first-name.f1-first-name.form-control(type='text', name='f1-first-name', placeholder='Nombre')
-                                  .errorFields.er
-                                    p Debes ingresar su nombre
                               .col-xs-12.col-sm-6.col-lg-2
                                 .form-group
                                   label.sr-only(for='f1-last-name') Apellido
                                   input#f1-last-name.f1-last-name.form-control(type='text', name='f1-last-name', placeholder='Apellido')
-                                  .errorFields.er
-                                    p Debes ingresar su apellido
                               .col-xs-12.col-sm-4.col-md-4.col-lg-2
                                 .form-group
                                   label.sr-only(for='f1-email') Email
-                                  input#f1-email.f1-email.form-control(type='text', name='f1-email', placeholder='Email')
-                                  .errorFields.er
-                                    p Debes ingresar su email
+                                  input#f1-email.f1-email.form-control(type='text', name='f1-email', placeholder='Email...')
                               .col-xs-12.col-sm-4.col-md-4.col-lg-2
                                 .form-group
                                   label.sr-only(for='f1-email') Confirma tu Email
                                   input#f1-email.f1-email.form-control(type='text', name='f1-email', placeholder='Confirma tu email')
-                                  .errorFields.er
-                                    p Debes confirmar su email
                               .col-xs-12.col-sm-3.col-md-3.col-lg-4
                                 .form-group
                                   label.sr-only(for='f1-email') RUT
                                   input#f1-first-name.f1-first-name.form-control(type='text', name='f1-first-name', placeholder='RUT')
-                                  .errorFields.er
-                                    p Debes ingresar su RUT 
 
                       .col-xs-12
                         .add-button
@@ -143,10 +127,10 @@ html.no-js(lang='es')
                         button.btn.btn-next(type='button') continuar
                     fieldset
                       .final
-                        p.thanks ¡Gracias por recomendar a tus amigos!
-                        p.text-step ¡Felicitaciones!, ya estás participando por tus Metropuntos.  Un mail de confirmación será enviado a ti y a tus invitados. 
-                        p.text-step Recuerda que solo ganas cuando alguno de tus recomendados se hayan inscrito al Club. El abono de los Metropuntos ganados se realizará durante mayo.
-                        p.text-step-last
+                        //-p.thanks ¡Gracias por recomendar a tus amigos!
+                        //-p.text-step ¡Felicitaciones!, ya estás participando por tus Metropuntos.  Un mail de confirmación será enviado a ti y a tus invitados. 
+                        //-p.text-step Recuerda que solo ganas cuando alguno de tus recomendados se hayan inscrito al Club. El abono de los Metropuntos ganados se realizará durante mayo.
+                        //-p.text-step-last
                           | ¡No olvides hacerte socio  
                           a(href='#') AQUÍ
                           |   para poder ganar este premio y aprovechar toda la entretención del Club Metrogas!
@@ -235,9 +219,9 @@ html.no-js(lang='es')
       .row
         footer
           .col-xs-12
-            a()
+            a(href="#")
               img.img-responsive(src="img/logo.png", alt="Metrogas Club")
-            a(href="#top").flecha-Right
+            .flecha-Right
                 img(src="img/arrow-bttm.svg", alt="subir")
               
           .col-xs-12.col-sm-6
@@ -256,7 +240,7 @@ html.no-js(lang='es')
 
           .col-xs-12
             .upFooter
-              a.arrow(href="#top")
+              a.arrow(href="#")
                 img(src="img/arrow-bttm.svg", alt="subir")
 
 
@@ -264,4 +248,5 @@ html.no-js(lang='es')
     script(src='js/jquery.min.js')
     script(src='js/bootstrap.min.js')
     script(src='js/main.js')
+    script(src='js/jquery.backstretch.min.js')
     script(src='js/xepOnline.jqPlugin.js')

@@ -16,7 +16,7 @@
       <div class="row">
         <div class="container">
           <div class="row">
-            <div class="preheader">
+            <div id="top" class="preheader">
               <div class="col-md-6"><a href="#" class="linkTop">ir al club Metrogas: <span>metrogas.cl/club</span></a></div>
               <div class="col-md-6">
                 <ul class="secondary-nav">
@@ -29,7 +29,7 @@
             </div>
             <header>
               <div class="row">
-                <div class="col-sm-12"><a href="#" class="logo"><img src="img/logo.png" alt="Metrogas Club" class="img-responsive"></a></div>
+                <div class="col-sm-12"><a href="http://www.metrogas.cl" target="_blank" class="logo"><img src="img/logo.png" alt="Metrogas Club" class="img-responsive"></a></div>
               </div>
             </header>
             <section class="main">
@@ -42,6 +42,9 @@
                     <form class="ingresa">
                       <h2>Ingresa tu RUT</h2>
                       <input type="text" placeholder="RUT:11111111-1">
+                      <div class="errorRut">
+                        <p>debes ingresar un RUT válido ej: 11111111.1</p>
+                      </div>
                       <input type="submit" value="Ingresar">
                     </form>
                   </div>
@@ -83,9 +86,7 @@
     <div class="container colorFull">
       <div class="row">
         <footer>
-          <div class="col-xs-12"><a href="#"><img src="img/logo.png" alt="Metrogas Club" class="img-responsive"></a>
-            <div class="flecha-Right"><img src="img/arrow-bttm.svg" alt="subir"></div>
-          </div>
+          <div class="col-xs-12"><a><img src="img/logo.png" alt="Metrogas Club" class="img-responsive"></a><a href="#top" class="flecha-Right"><img src="img/arrow-bttm.svg" alt="subir"></a></div>
           <div class="col-xs-12 col-sm-6"><a href="#" class="linkFoot">ir al sitio: <span>metrogas.cl/club</span></a></div>
           <div class="col-xs-12 col-sm-6">
             <ul class="navFoot">
@@ -98,7 +99,7 @@
             </ul>
           </div>
           <div class="col-xs-12">
-            <div class="upFooter"><a href="#" class="arrow"><img src="img/arrow-bttm.svg" alt="subir"></a></div>
+            <div class="upFooter"><a href="#top" class="arrow"><img src="img/arrow-bttm.svg" alt="subir"></a></div>
           </div>
         </footer>
       </div>
