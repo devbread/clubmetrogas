@@ -38,13 +38,13 @@ textarea.form-control:focus {
 }
 
 input[type="text"]:-moz-placeholder, input[type="password"]:-moz-placeholder, 
-textarea:-moz-placeholder, textarea.form-control:-moz-placeholder { color: #888; }
+textarea:-moz-placeholder, textarea.form-control:-moz-placeholder { color: #888; font-family: 'montserratregular'; font-size: 0.7em; }
 
 input[type="text"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, 
-textarea:-ms-input-placeholder, textarea.form-control:-ms-input-placeholder { color: #888; }
+textarea:-ms-input-placeholder, textarea.form-control:-ms-input-placeholder { color: #888; font-family: 'montserratregular'; font-size: 0.7em; }
 
 input[type="text"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, 
-textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeholder { color: #888; }
+textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeholder { color: #888; font-family: 'montserratregular'; font-size: 0.7em;}
 
 label { font-weight: 300; }
 
@@ -86,7 +86,7 @@ button.btn.btn-next:active:focus, button.btn.btn-next.active:focus { background:
 
 button.btn.btn-submit,
 button.btn.btn-submit:focus,
-button.btn.btn-submit:active:focus, button.btn.btn-submit.active:focus { background: #f35b3f; }
+button.btn.btn-submit:active:focus, button.btn.btn-submit.active:focus { background: $green; font-family: 'montserratbold'; }
 
 button.btn.btn-previous,
 button.btn.btn-previous:focus,
@@ -410,6 +410,24 @@ ul.navbar-nav {
 
 }
 
+//bonon continuar
+.end{
+  // position: relative;
+  // top: -17px;
+  clear: both;
+  margin-top: 40px;
+  @include breakpoint(small){
+    margin-top: 0;
+  }
+}
+
+.endButton{
+  @include breakpoint(small){
+    width: 70% !important;
+    float: right;
+  }
+}
+
 .error-text {
   color:red;
   display: block;
@@ -438,6 +456,15 @@ ul.navbar-nav {
 }
 
 fieldset{
+
+  .add-button{
+    position: relative;
+    @include breakpoint(small){
+      margin-bottom: 4em;
+    }
+  }
+
+
   .text-rosa{
     // float: right;
     font-family: 'montserratbold';
@@ -446,6 +473,18 @@ fieldset{
     color:$green;
     margin-bottom: 0;
     margin-top: 10px;
+    text-decoration: underline;
+    @include breakpoint(small){
+      float: right;
+      margin-right: 20px;
+      font-size: 0.9em;
+    }
+    @include breakpoint(medium){
+      margin-right: 25px;
+    }
+    @include breakpoint(large){
+      margin-right: 40px;
+    }
   }
 
   .signo-mas{
@@ -455,8 +494,305 @@ fieldset{
     display: block;
     text-align: center;
     margin-bottom: 20px;
+    @include breakpoint(small){
+      position: absolute;
+      right: -15px;
+      width: 5%;
+      top:-2px;
+    }
   }
 }
+
+
+fieldset{
+  .final{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #A263B8;
+    position: relative;
+    z-index: 1;
+    background-image: url(../img/nina-alone.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 750px;
+    @include breakpoint(small){
+      height: auto;
+      border-radius: 10px;
+      background-position: right bottom;
+      background-repeat: no-repeat;
+      background-size: 40%;
+      height: 350px;
+    }
+    @include breakpoint(large){
+      height: 430px;
+      background-image: url(../img/nina-alone-desktop.png);
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    &:before{
+      content:"";
+      position: absolute;
+      width: 30px;
+      height: 100%;
+      background-color: #A263B8;
+      top: 0;
+      left: -28px;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+     @include breakpoint(small){
+      display: none;
+     } 
+    }
+    &:after{
+      content:"";
+      position: absolute;
+      width: 30px;
+      height: 100%;
+      background-color: #A263B8;
+      top: 0;
+      right: -28px;
+      bottom: 0;
+      z-index: -1;
+     @include breakpoint(small){
+      display: none;
+     } 
+    }
+    .thanks{
+      color: $secondary-color;
+      text-align: center;
+      font-family: 'montserratblack';
+      font-size: 1.3em;
+      @include breakpoint(small){
+        text-align: left;
+        font-size: 1.8em;
+        width: 58%;
+      }
+      @include breakpoint(large){
+        font-size: 36px;
+        width: 40%;
+      }
+    }
+    .text-step{
+      font-family: 'montserratregular';
+      font-size: 1em;
+      text-align: center;
+      color: $secondary-color;
+      @include breakpoint(small){
+        font-size: 0.8em;
+        text-align: left;
+        width: 60%;
+      }
+      @include breakpoint(large){
+        width: 49%;
+        font-size: 1em;
+      }
+    }
+    .text-step-last{
+      font-family: 'montserratblack';
+      font-size: 1em;
+      text-align: center;
+      color: $secondary-color;
+      a{
+        color: $secondary-color;
+        text-decoration: underline; 
+      }
+      @include breakpoint(small){
+        width: 60%;
+        text-align: left;
+      }
+    }
+  }
+  .final-list{
+    display: none;
+    @include breakpoint(small){
+      display: block;
+      margin: 40px 0px 20px 0px;
+    }
+    .final-list-title-top{
+      font-family: 'montserratbold';
+      font-size: 0.9em;
+      text-align: left;
+      color: $primary-color;
+    }
+
+    //stakable
+
+    //stakable
+
+  }
+  .final-list-data{
+    margin: 40px 0;
+    position: relative;
+    .number{
+      position: absolute;
+      color: $primary-color;
+      font-family: 'montserratblack';
+      font-size: 2em;
+      top: -5px;
+      @include breakpoint (small){
+        position: static;
+        font-size: 0.9em;
+        text-align: center;
+        width: 100%;
+        display: block;
+      }
+
+
+    }
+    .final-list-title{
+      margin-left: 35px;
+      font-family: 'montserratregular';
+      font-size: 1em;
+      text-align: left;
+      color: #959CAE;
+       @include breakpoint (small){
+        margin-left: 0;
+        font-size: 0.9em;
+       }
+    }
+
+    .table-bordered{
+      border: none;
+    }
+    .table-striped{
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+.table-striped > tbody > tr:nth-of-type(odd){
+  border: none;
+}
+
+.table-bordered > tbody > tr > th, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > tfoot > tr > td{
+  border: none;
+}
+
+.table-bordered > thead.cf > tr{
+  height: 50px;
+}
+
+.table-bordered > thead.cf > tr > th{
+  color: $primary-color;
+  text-align: center;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd){
+  background-color: transparent;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td{
+  border: none;
+}
+
+#no-more-tables td{
+  color:#959CAE;
+  span{
+    color: $primary-color;
+    font-family: 'montserratblack';
+
+  }
+}
+    @media only screen and (max-width: 500px) {
+        
+        /* Force table to not be like tables anymore */
+      #no-more-tables table, 
+      #no-more-tables thead, 
+      #no-more-tables tbody, 
+      #no-more-tables th, 
+      #no-more-tables td, 
+      #no-more-tables tr { 
+        display: block; 
+      }
+     
+      /* Hide table headers (but not display: none;, for accessibility) */
+      #no-more-tables thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        background: transparent !important;
+      }
+
+      .lastPosAbs{
+        position: relative;
+      }
+     
+      // #no-more-tables tr { border: 1px solid #ccc; }
+     
+      #no-more-tables td { 
+        /* Behave  like a "row" */
+        border: none;
+        // border-bottom: 1px solid #eee; 
+        position: relative;
+        //padding-left: 50%; 
+        white-space: normal;
+        text-align:left;
+        padding-left: 25px;
+        color:#959CAE;
+        @include breakpoint(small){
+          color: #959CAE;
+        }
+        span{
+          position: absolute;
+          left: 0;
+          top: 8px;
+          font-size: 2em;
+          color: $primary-color;
+        }
+      }
+     
+      #no-more-tables td:before { 
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%; 
+        padding-right: 10px; 
+        white-space: nowrap;
+        text-align:left;
+        font-weight: bold;
+      }
+     
+      /*
+      Label the data
+      */
+      #no-more-tables td:before { content: attr(data-title); }
+    }
+
+  }
+
+  //botones
+  .whatDo{
+    width: 100%;
+    margin: 40px 0 50px 0;
+    float: left;
+    text-align: center;
+    clear: both;
+    .whatDo_action{
+      background-color: #C0C5D0;
+      color:$secondary-color;
+      font-family: 'montserratbold';
+      font-size: 0.8em;
+      border-radius: 10px;
+      padding: 20px 10px;
+      display: block;
+      & span{
+        display: none;
+        @include breakpoint(small){
+          display: inline-block;
+        }
+      }
+      @include breakpoint(small){
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
 
 /***** Media queries *****/
 

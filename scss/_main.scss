@@ -251,3 +251,97 @@
 		}
 	}
 }
+
+.final{
+	height: 900px;
+	padding:20px;
+	background: rgba(203,156,219,1); /* old browsers */
+	background-image: url(../img/nina-final.png), linear-gradient(-204deg, #8639AA 0%, #CB9CDB 100%); /* Chrome 10-25, Safari 5.1-6 */
+	//background-image: url(../img/nina.png), linear-gradient(45deg, rgba(255,187,16,1) 0%, rgba(255,187,16,1) 45%, rgba(255,187,16,1) 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	text-align: center;
+	@include breakpoint(small){
+		background: rgba(203,156,219,1); /* old browsers */
+		background-image: url(../img/final-desk.png), linear-gradient(-204deg, #8639AA 0%, #CB9CDB 100%); /* Chrome 10-25, Safari 5.1-6 */
+		//background-image: url(../img/nina-tablet.png), linear-gradient(45deg, rgba(255,187,16,1) 0%, rgba(255,187,16,1) 45%, rgba(255,187,16,1) 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		background-repeat: no-repeat;
+		background-position: center -30px;
+		text-align: left;
+		padding:0;
+		background-size: 132%;
+		// padding:20px;
+		height: auto;
+	}
+
+	@include breakpoint(medium){
+		background-size: 110%;
+		background-image: url(../img/final-desk.png), linear-gradient(-204deg, #8639AA 0%, #CB9CDB 100%);
+		background-position: 0;
+	}
+
+	@include breakpoint(large){
+		background: rgba(203,156,219,1); /* old browsers */
+		background-image: url(../img/final-desk.png), linear-gradient(-204deg, #8639AA 0%, #CB9CDB 100%);/* Chrome 10-25, Safari 5.1-6 */
+		//background-image: url(../img/nina-desktop.png), linear-gradient(45deg, rgba(255,187,16,1) 0%, rgba(255,187,16,1) 45%, rgba(255,187,16,1) 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-size: 100%;
+		text-align: left;
+		// padding:20px;
+		height: 500px;
+	}
+
+	.claim-final{
+		@include breakpoint(small){
+			padding:40px 80px;
+		}
+		.final-title-1 {
+			color: $secondary-color;
+			text-align: center;
+			font-size: 1.5em;
+			font-family: 'montserratblack';
+			text-transform: uppercase;
+			@include breakpoint(small){
+				display: block;
+			}
+		}
+		h1{
+			font-size: 3em;
+			font-family: 'montserratblack';
+			text-align: center;
+			color: $secondary-color;
+		}
+		p{
+			color: $secondary-color;
+			line-height: 25px;
+			& span{
+				display: block;
+			}
+			@include breakpoint(small){
+				text-align: center;
+			}
+		}
+		.bold{
+			font-size: 1.2em;
+			font-family: 'montserratblack';
+			text-align: center;
+			color: $secondary-color;
+			margin:22px 0;
+		}
+		.inscribete{
+			border-radius: 10px;
+			background-color: $primary-color;
+			padding: 20px 10px;
+			color: $secondary-color;
+			display: block;
+			font-family: 'montserratbold';
+			margin: 1.5em 0 1em 0;
+			@include breakpoint(small){
+				width: 277px;
+				text-align: center;
+				margin: 0 auto;
+			}
+		}
+	}
+}
