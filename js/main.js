@@ -158,3 +158,5 @@ $(add_button).click(function(e){ //on add input button click
 $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
         e.preventDefault(); $(this).parent('div').remove(); x--;
 });
+
+

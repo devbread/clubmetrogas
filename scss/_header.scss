@@ -1,3 +1,8 @@
+*:focus {
+outline: 0;
+}
+
+
 body{
 	background-color: #f1f1f1;
 	font-family: 'montserratregular';
@@ -23,6 +28,7 @@ body{
 	.linkTop{
 		color:$primary-color;
 		font-size: 0.8em;
+		text-decoration: none;
 		& span{
 			font-family: 'montserratbold';
 		}
@@ -81,6 +87,9 @@ header{
 		}
 	}
 	@include breakpoint(medium){
-		padding:50px 20px;
+		padding:20px 20px;
+		& img{
+			width: 20%;
+		}
 	}
 }

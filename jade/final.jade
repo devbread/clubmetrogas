@@ -10,6 +10,7 @@ html.no-js(lang='es')
     //- Place favicon.ico in the root directory
 
     link(rel='stylesheet', href='css/style.css')
+    link(rel='stylesheet', href='css/ripple.css')
     link(rel='stylesheet', href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
 
     script(src='js/modernizr.js')
@@ -20,15 +21,15 @@ html.no-js(lang='es')
           .row
             .preheader#top
               .col-md-6
-                a.linkTop(href="#") ir al club Metrogas: 
-                  span metrogas.cl/club
+                a.linkTop(href="http://www.metrogas.cl/club/",target="_blank") ir al Sitio Club Metrogas: 
+                  span www.metrogas.cl/club
               .col-md-6
                 ul.secondary-nav
-                  li: a(href="#") preguntas frecuentes
-                  li: a(href="#") conócenos            
-                  li: a(href="#") 
+                  li: a(href="http://www.metrogas.cl/club/preguntasfrecuentes",target="_blank") Preguntas frecuentes
+                  li: a(href="http://www.metrogas.cl/club/", target="_blank") Conócenos            
+                  li: a(href="https://www.facebook.com/ClubMetrogasCL/",target="_blank") 
                     i.ion-social-facebook
-                  li: a(href="#") 
+                  li: a(href="https://twitter.com/Club_Metrogas",target="_blank") 
                     i.ion-social-twitter
             header
               .row
@@ -39,18 +40,16 @@ html.no-js(lang='es')
               .row
                 .col-xs-12.col-sm-12.col-lg-12
                   .claim-final
-                    span.final-title-1 El proceso ha finalizado exitosamente
-                    h1 RECUERDA
-                    p Mientras más amigos invites a ser socios del Club, <span>¡más posibilidades tienes de ganar 50.000 Metropuntos adicionales!</span> Los 3 socios que logren más amigos inscritos al Club se ganan este increíble premio. 
-                    p.bold Si aún no eres socio del club
-                    a.inscribete(href="#") inscribete aquí
+                    .final-title-1 GRACIAS POR INVITAR
+                      <span>A TUS AMIGOS</span> AL CLUB METROGAS
+                    p  Muy pronto tú y los amigos que invitaste al Club recibirán un mail de confirmación.
+                    p ¡Suerte! 
+                    a.inscribete.ripple(href="#") Finalizar
 
             section.legal
               .row
                 .col-xs-12
-                  p  Para participar, debes ingresar tus datos y los de las personas que recomiendes en el sitio www.pordefinir.cl. Un mail de confirmación te llegará a ti y a tu(s) invitado(s) con información del Club. Existe un total de 500 premios de 20.000 Metropuntos.Recuerda que solo se puede ganar un máximo de 60.000 Metropuntos. Los Metropuntos que ganes solo los podrás aprovechar cuando estés inscrito en el Club Metrogas. Promoción válida desde el 01 al 31 de mayo del 2017.¡Aprovéchala y disfruta aún más los beneficios del Club Metrogas.
-                  p  Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                  p  Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.
+                  p  Promoción vigente desde el 22 de mayo 2017 hasta el 11 de mayo 2017, ambas fechas inclusive, o hasta agotar stock de 500 premios de 20.000 Metropuntos y 3 premios de 50.000 Metropuntos. El abono de Metropuntos se realizará al RUT del Recomendado antes del 30 de junio 2017. *Cada Recomendador podrá obtener un máximo de 3 premios de 20.000 Metropuntos y un premio de 50.000 Metropuntos. Los recomendados serán considerados cuando estos no hayan estado inscritos en el Club Metrogas hasta el 21 de mayo 2017. Si existieran un Recomendado común a dos Recomendadores, el premio será para el primero que recomendó. Ver detalles, condiciones y restricciones de esta promoción en www.metrogas.cl/bases_y_promociones. Las bases de este programa han sido protocolizadas en la 16a Notaría de Santiago de Doña Antonieta Mendoza Escalas, ubicada en San Sebastián N°2750, pisos, 1 y 2, Las Condes.
     .container.colorFull
       .row
         footer
@@ -61,17 +60,17 @@ html.no-js(lang='es')
                 img(src="img/arrow-bttm.svg", alt="subir")
               
           .col-xs-12.col-sm-6
-            a.linkFoot(href="#") ir al sitio: <span>metrogas.cl/club</span>
+            a.linkFoot(href="http://www.metrogas.cl/club/",target="_blank") ir al Sitio del Club Metrogas: <span>www.metrogas.cl/club</span>
           .col-xs-12.col-sm-6
             ul.navFoot
-              li: a(href="#") preguntas frecuentes
-              li: a(href="#") Conócenos
+              li: a(href="http://www.metrogas.cl/club/preguntasfrecuentes",target="_blank") Preguntas frecuentes
+              li: a(href="http://www.metrogas.cl/club/", target="_blank") Conócenos
             ul.socialNav
               li
-                 a(href="#")
+                 a(href="https://www.facebook.com/ClubMetrogasCL/",target="_blank")
                     i.ion-social-facebook
               li
-                 a(href="#")
+                 a(href="https://twitter.com/Club_Metrogas",target="_blank")
                     i.ion-social-twitter
 
           .col-xs-12

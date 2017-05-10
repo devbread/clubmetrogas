@@ -170,8 +170,100 @@ button.btn.btn-previous:active:focus, button.btn.btn-previous.active:focus { bac
   }
 }
 
+
+
+//confirmar
+
+.confirmar{
+  text-align: center;
+  margin-bottom: 2em;
+  float: left;
+  @include breakpoint(small){
+    padding-left: 10px;
+  }
+  input[type=checkbox] {
+    opacity: 0;
+    float:left;
+  }
+  input[type=checkbox] + label {
+    margin: 0 0 0 30px;//20
+    position: relative;
+    cursor: pointer;
+    font-family: 'montserratbold';
+    float: left;
+    color:$green;
+    font-size: 0.8em;
+    text-align: left;
+    @include breakpoint(small){
+      margin-left: 1px;
+      margin-top: 1em;
+    }
+  }
+
+  input[type=checkbox] + label ~ label {
+    margin: 0 0 0 40px;
+  }
+
+  input[type=checkbox] + label::before {
+    content: ' ';
+    position: absolute;
+    left: -30px;//35
+    top: 5px;
+    width: 25px;
+    height: 25px;
+    display: block;
+    background: #c1c5d0;
+    border-radius:3px;
+    @include breakpoint(small){
+      top:-2px;
+      left: -35px;
+    }
+  }
+
+  input[type=checkbox] + label::after {
+    content: ' ';
+    position: absolute;
+    left: -30px;//35
+    top: 5px;
+    width: 25px;
+    height: 25px;
+    display: block;
+    z-index: 1;
+    background: white url('../img/check.svg') no-repeat center center;
+    -ms-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    transition: all .3s ease;
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    @include breakpoint(small){
+      top:-2px;
+      left: -35px;
+    }
+  }
+
+  input[type=checkbox]:checked + label::after {
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
 .condiciones{
-    margin: 1em 0 4em 0 ;
+    margin: 1em 0 0 0 ;
+    @include breakpoint(large){
+      margin-bottom: 0;
+      margin-top: 24px;
+    }
   #toggleButton{
     color:$primary-color;
     text-decoration: underline;
@@ -193,7 +285,9 @@ button.btn.btn-previous:active:focus, button.btn.btn-previous.active:focus { bac
   }
   #disclaimer{
     display: none;
-
+    @include breakpoint(small){
+      height: 380px;
+    }
     #disclaimer-text{
       -webkit-box-shadow: inset 0px 0px 5px 0px rgba(192,197,208,1);
       -moz-box-shadow: inset 0px 0px 5px 0px rgba(192,197,208,1);
@@ -215,14 +309,14 @@ button.btn.btn-previous:active:focus, button.btn.btn-previous.active:focus { bac
     a#closer{
       /* Rectangle 2: */
       position: relative;
-      top: 38px;
-      left: 33%;
+      top: 0px;
+      left: 37%;
       border-top: none;
       border-left: 1px solid #E6E7E8;
       border-right: 1px solid #E6E7E8;
       border-bottom: 1px solid #E6E7E8;
       border-radius: 0 0 10px 10px;
-      padding: 15px;
+      padding: 8px;
       /* cerrar: */
       font-family: 'montserratregular';
       font-size: 13px;
@@ -236,12 +330,18 @@ button.btn.btn-previous:active:focus, button.btn.btn-previous.active:focus { bac
       /* Oval: */
       //border: 1px solid #C0C5D0;
       margin: 0 auto;
-      padding-top: 40px;
+
       text-decoration: underline;
-      background:transparent url('../img/closer.png') center 10px no-repeat;
+      background: transparent;
       @include breakpoint(small){
         left: 45%;
         cursor: pointer;
+        background:transparent url('../img/closer.png') center 10px no-repeat;
+
+        top: 38px;
+        padding: 15px;
+        top:35px;
+        padding-top: 40px;
       }
     }
   }
@@ -515,21 +615,24 @@ fieldset{
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 750px;
+    height: 560px;//750
     @include breakpoint(small){
       height: auto;
       border-radius: 10px;
       background-position: right bottom;
       background-repeat: no-repeat;
       background-size: 40%;
-      height: 350px;
+      height: 250px;//350
+    }
+    @include breakpoint(medium){
+      background-position: right 0;
     }
     @include breakpoint(large){
-      height: 430px;
+      height: 310px;//430
       background-image: url(../img/nina-alone-desktop.png);
-      background-position: center right;
+      background-position: -120px -110px;
       background-repeat: no-repeat;
-      background-size: 100%;
+      background-size: 110%;
     }
     &:before{
       content:"";
@@ -780,6 +883,7 @@ fieldset{
       border-radius: 10px;
       padding: 20px 10px;
       display: block;
+      text-decoration: none;
       & span{
         display: none;
         @include breakpoint(small){
@@ -793,6 +897,37 @@ fieldset{
   }
 }
 
+.claim-recomienda{
+  color: $primary-color;
+  font-size: 1.2em;
+  text-align: center;
+  font-family: 'montserratlight';
+  margin-bottom: 1.5em;
+  @include breakpoint(small){
+    font-size: 1.125em;
+    width: 90%;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5em;
+  }
+  @include breakpoint(medium){
+    font-size: 1.5em;
+    width: 85%;
+  }
+  @include breakpoint(large){
+    width: 90%;
+    font-size: 1.9em;
+  }
+  & .strong{
+    font-family: 'montserratblack';    
+  }
+
+  & .bolder{
+    font-family: 'montserratbold';    
+  }
+
+}
 
 /***** Media queries *****/
 

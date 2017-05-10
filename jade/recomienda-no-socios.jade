@@ -10,6 +10,7 @@ html.no-js(lang='es')
     //- Place favicon.ico in the root directory
 
     link(rel='stylesheet', href='css/style.css')
+    link(rel='stylesheet', href='css/ripple.css')
     link(rel='stylesheet', href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')
 
     script(src='js/modernizr.js')
@@ -96,7 +97,7 @@ html.no-js(lang='es')
                               p  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas faucibus mollis interdum. Cras mattis consectetur purus sit amet fermentum.
                             a#closer(href="#") cerrar
                       .f1-buttons
-                        button.btn.btn-next(type='button') continuar
+                        button.btn.btn-next.ripple(type='button') continuar
                     fieldset
                       p.text-step ¡Recomienda a todos los amigos que quieras y vive junto a ellos la entretención del Club Metrogas! Ingresa aquí sus datos para que se les envíe un mail de confirmación de socios.
 
@@ -140,7 +141,7 @@ html.no-js(lang='es')
                           <a href="#" class="signo-mas add_field_button"><i class="ion-plus-circled"></i></a>
                       .f1-buttons
                         //- button.btn.btn-previous(type='button') Previous
-                        button.btn.btn-next(type='button') continuar
+                        button.btn.btn-next.ripple(type='button') continuar
                     fieldset
                       .final
                         p.thanks ¡Gracias por recomendar a tus amigos!
@@ -215,15 +216,15 @@ html.no-js(lang='es')
 
                         .whatDo
                           .col-xs-6.col-sm-3
-                            a.whatDo_action(href="#", onclick="return xepOnline.Formatter.Format('usage',{render:'download'});") Descargar 
+                            a.whatDo_action.ripple(href="#", onclick="return xepOnline.Formatter.Format('usage',{render:'download'});") Descargar 
                               span PDF
                           .col-xs-6.col-sm-3
-                            a.whatDo_action(href="#") Imprimir
+                            a.whatDo_action.ripple(href="#") Imprimir
 
                           .col-xs-12.col-sm-6
                             .f1-buttons.end
                               //- button.btn.btn-previous(type='button') Previous
-                              button.btn.btn-submit.endButton(type='submit') Continuar
+                              button.btn.btn-submit.endButton.ripple(type='submit') Continuar
 
             section.legal
               .row

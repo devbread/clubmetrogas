@@ -124,7 +124,7 @@
 			}
 		}
 
-		input[type="submit"]{
+		button[type="submit"]{
 			background-color: $primary-color;
 			width: 100%;
 			padding: 9px;
@@ -199,8 +199,8 @@
 			   		box-shadow: 305px 0px 0px 0px rgba(255, 255, 255, 1);
 			   	}
 			   	@include breakpoint(large){
-					left: 70px;
-					box-shadow: 245px 0px 0px 0px white;
+					left: 85px;
+					box-shadow: 230px 0px 0px 0px white;
 			   	}
 			}
 			&:before{
@@ -217,7 +217,7 @@
 			    	right: 140px;
 			    }
 			    @include breakpoint(large){
-			    	right: 80px;
+			    	right: 88px;
 			    }
 			}
 		}
@@ -235,6 +235,11 @@
 					position: relative;
 					top: -15px;
 				}
+				@include breakpoint(large){
+					float: none;
+					display: block;
+					margin-right: 0;
+				}
 			}
 			p{
 				font-size: 0.9em;
@@ -245,6 +250,12 @@
 					width: 70%;
 					font-size: 0.75em;
 					text-align: left;
+				}
+				@include breakpoint(large){
+					text-align: center;
+					width: 100%;
+					position: relative;
+					top: -20px;
 				}
 			}
 		}
@@ -266,6 +277,7 @@
 		color:$color-text;
 		text-align: center;
 		font-size: 0.7em;
+		color: #566280;
 		@include breakpoint(small){
 			text-align: left;
 			font-size: 0.65em;
@@ -274,7 +286,7 @@
 }
 
 .final{
-	height: 900px;
+	height: 750px;//900
 	padding:20px;
 	background: rgba(203,156,219,1); /* old browsers */
 	background-image: url(../img/nina-final.png), linear-gradient(-204deg, #8639AA 0%, #CB9CDB 100%); /* Chrome 10-25, Safari 5.1-6 */
@@ -299,18 +311,19 @@
 		background-size: 110%;
 		background-image: url(../img/final-desk.png), linear-gradient(-204deg, #8639AA 0%, #CB9CDB 100%);
 		background-position: 0;
+		height: 480px
 	}
 
 	@include breakpoint(large){
 		background: rgba(203,156,219,1); /* old browsers */
-		background-image: url(../img/final-desk.png), linear-gradient(-204deg, #8639AA 0%, #CB9CDB 100%);/* Chrome 10-25, Safari 5.1-6 */
+		background-image: url(../img/pepa-big-big.png), linear-gradient(-204deg, #8639AA 0%, #CB9CDB 100%);/* Chrome 10-25, Safari 5.1-6 */
 		//background-image: url(../img/nina-desktop.png), linear-gradient(45deg, rgba(255,187,16,1) 0%, rgba(255,187,16,1) 45%, rgba(255,187,16,1) 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 		background-repeat: no-repeat;
 		background-position: 0 0;
-		background-size: 100%;
+		background-size: 110%;
 		text-align: left;
 		// padding:20px;
-		height: 500px;
+		height: 605px;
 	}
 
 	.claim-final{
@@ -323,8 +336,20 @@
 			font-size: 1.5em;
 			font-family: 'montserratblack';
 			text-transform: uppercase;
+			display: block;
+			margin-bottom: 1em;
 			@include breakpoint(small){
 				display: block;
+				width: 70%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			@include breakpoint(large){
+				font-size: 2.438em;
+				margin-top: 1.5em;
+				& span{
+					display: block;
+				}
 			}
 		}
 		h1{
@@ -341,6 +366,14 @@
 			}
 			@include breakpoint(small){
 				text-align: center;
+				width: 60%;
+				margin-right: auto;
+				margin-left: auto;
+			}
+			@include breakpoint(large){
+				font-size: 1.3em;
+				width: 45%;
+				line-height: 30px;
 			}
 		}
 		.bold{
@@ -358,10 +391,11 @@
 			display: block;
 			font-family: 'montserratbold';
 			margin: 1.5em 0 1em 0;
+			text-decoration: none;
 			@include breakpoint(small){
 				width: 277px;
 				text-align: center;
-				margin: 0 auto;
+				margin: 2em auto;
 			}
 		}
 	}
@@ -385,6 +419,7 @@
 					bottom: -3px;
 					left: 0px;
 					margin: 0;
+					display: none;
 				}
 				.er{
 					@include breakpoint(small){
@@ -392,8 +427,163 @@
 					}
 				}
 			}
+			.warn{
+				color: $primary-color;
+				float: left;
+				margin-bottom: 2em;
+				font-family: 'montserratbold';
+				text-align: left;
+				display: block;
+				width: 100%;
+				position: relative;
+				top: 0px;
+				font-size: 0.65em;
+			}
 		}
 	}
 }
+
+
+//hover ripple in
+
+
+
+/* Ripple In */
+@-webkit-keyframes hvr-ripple-in {
+  100% {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes hvr-ripple-in {
+  100% {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+.hvr-ripple-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+.hvr-ripple-in:before {
+  content: '';
+  position: absolute;
+  border: $primary-color solid 4px;
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: -12px;
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: .3s;
+  border-radius: 10px;
+}
+.hvr-ripple-in:focus:before, .hvr-ripple-in:active:before, .hvr-ripple-in:hover:before {
+  -webkit-animation-name: hvr-ripple-in;
+  animation-name: hvr-ripple-in;
+}
+
+@-webkit-keyframes hvr-ripple-in-g {
+  100% {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes hvr-ripple-in-g {
+  100% {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+.hvr-ripple-in-g {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+.hvr-ripple-in-g:before {
+  content: '';
+  position: absolute;
+  border: $green solid 4px;
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: -12px;
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: .8s;
+  border-radius: 10px;
+}
+.hvr-ripple-in-g:focus:before, .hvr-ripple-in-g:active:before, .hvr-ripple-in-g:hover:before {
+  -webkit-animation-name: hvr-ripple-in-g;
+  animation-name: hvr-ripple-in-g;
+}
+
+
+
+
+@-webkit-keyframes hvr-ripple-in-gray {
+  100% {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes hvr-ripple-in-gray {
+  100% {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+.hvr-ripple-in-gray {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+}
+.hvr-ripple-in-gray:before {
+  content: '';
+  position: absolute;
+  border: #C0C5D0 solid 4px;
+  top: -12px;
+  right: -12px;
+  bottom: -12px;
+  left: -12px;
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: .8s;
+  border-radius: 10px;
+}
+.hvr-ripple-in-gray:focus:before, .hvr-ripple-in-gray:active:before, .hvr-ripple-in-gray:hover:before {
+  -webkit-animation-name: hvr-ripple-in-g;
+  animation-name: hvr-ripple-in-g;
+}
+
+
 
 
