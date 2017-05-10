@@ -6216,6 +6216,10 @@ footer {
       .legal p {
         text-align: left;
         font-size: 0.65em; } }
+    .legal p a {
+      color: #8639ab;
+      font-family: 'montserratbold';
+      text-decoration: none; }
 
 .final {
   height: 750px;
